@@ -1,4 +1,4 @@
-# Adventure Trip 2026
+# Samthing Frantastic (working slug: adventure-trip-2026)
 
 Sam and Fran are planning a 3-5 week outdoor adventure trip departing approximately 29 August 2026. This project is a set of visual planning pages, hosted on GitHub Pages, that start as inspiration/discussion material and evolve into a functional reference for the trip.
 

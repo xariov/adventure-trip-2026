@@ -1,4 +1,4 @@
-# Adventure Trip 2026
+# Samthing Frantastic
 
 Planning pages for Sam and Fran's 3-5 week hiking and climbing trip departing ~29 August 2026.
 

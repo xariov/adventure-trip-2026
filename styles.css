@@ -1,0 +1,384 @@
+/* Adventure Trip 2026 - shared styles */
+
+:root {
+  --page: #f9f9f7;
+  --surface: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink-secondary: #52514e;
+  --ink-muted: #898781;
+  --hairline: #e1e0d9;
+  --border: rgba(11, 11, 11, 0.10);
+  --accent: #1c5cab;
+  --accent-soft: #cde2fb;
+  --warn-bg: #fdf3e0;
+  --warn-border: #eda100;
+  --good: #006300;
+
+  --series-1: #2a78d6; /* Dolomites and Arco (Italy) */
+  --series-2: #1baf7a; /* Kalymnos (Greece) */
+  --series-3: #eda100; /* Slovenia */
+  --series-4: #008300; /* Squamish (Canada) */
+
+  --radius: 10px;
+  --content-width: 62rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --ink: #ffffff;
+    --ink-secondary: #c3c2b7;
+    --ink-muted: #898781;
+    --hairline: #2c2c2a;
+    --border: rgba(255, 255, 255, 0.10);
+    --accent: #6da7ec;
+    --accent-soft: #10315c;
+    --warn-bg: #2a2107;
+    --warn-border: #c98500;
+    --good: #0ca30c;
+
+    --series-1: #3987e5;
+    --series-2: #199e70;
+    --series-3: #c98500;
+    --series-4: #008300;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.55;
+  font-size: 16px;
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+
+/* ---------- Navigation ---------- */
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--surface);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.site-nav .nav-inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0.55rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem 0.9rem;
+  flex-wrap: wrap;
+}
+
+.site-nav .brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: 0.4rem;
+  white-space: nowrap;
+}
+
+.site-nav a.nav-link {
+  color: var(--ink-secondary);
+  text-decoration: none;
+  padding: 0.15rem 0.15rem;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+
+.site-nav a.nav-link:hover { color: var(--ink); }
+
+.site-nav a.nav-link[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 600;
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- Layout ---------- */
+
+main {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 1.5rem 1rem 4rem;
+}
+
+h1 { font-size: 2rem; line-height: 1.2; margin: 1rem 0 0.75rem; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; line-height: 1.25; margin: 2.2rem 0 0.6rem; letter-spacing: -0.01em; }
+h3 { font-size: 1.12rem; margin: 1.6rem 0 0.4rem; }
+p { margin: 0.55rem 0; }
+ul, ol { margin: 0.55rem 0; padding-left: 1.4rem; }
+li { margin: 0.25rem 0; }
+
+.lede { font-size: 1.08rem; color: var(--ink-secondary); max-width: 46rem; }
+
+hr { border: none; border-top: 1px solid var(--hairline); margin: 2rem 0; }
+
+/* ---------- Cards ---------- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1rem;
+  margin: 1.2rem 0;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.card h3 { margin: 0.1rem 0 0.2rem; }
+.card p { margin: 0.3rem 0; font-size: 0.95rem; }
+.card .meta { color: var(--ink-muted); font-size: 0.85rem; }
+.card .spacer { flex: 1; }
+
+.card.accent { border-top: 3px solid var(--accent); }
+
+/* Region color coding */
+.card.region-italy { border-top: 3px solid var(--series-1); }
+.card.region-greece { border-top: 3px solid var(--series-2); }
+.card.region-slovenia { border-top: 3px solid var(--series-3); }
+.card.region-other { border-top: 3px solid var(--series-4); }
+
+/* ---------- Badges and tags ---------- */
+
+.badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--ink-secondary);
+  background: transparent;
+  white-space: nowrap;
+}
+
+.badge.solid { background: var(--accent-soft); color: var(--ink); border-color: transparent; }
+.badge.pick { background: var(--accent); color: #ffffff; border-color: transparent; }
+
+.badge-row { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.4rem 0; }
+
+/* ---------- Callouts ---------- */
+
+.callout {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  margin: 1.1rem 0;
+}
+
+.callout.warn { border-left-color: var(--warn-border); background: var(--warn-bg); }
+
+.callout .callout-title { font-weight: 700; margin: 0 0 0.25rem; }
+.callout p { margin: 0.3rem 0; }
+
+/* ---------- Tables ---------- */
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.93rem;
+  min-width: 34rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.55rem 0.8rem;
+  border-bottom: 1px solid var(--hairline);
+  vertical-align: top;
+}
+
+thead th {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+  border-bottom: 1px solid var(--hairline);
+  background: var(--surface);
+}
+
+tbody tr:last-child td { border-bottom: none; }
+
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ---------- Fact strip ---------- */
+
+.fact-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+  gap: 0.8rem;
+  margin: 1.4rem 0;
+}
+
+.fact {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.7rem 0.9rem;
+}
+
+.fact .fact-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+}
+
+.fact .fact-value { font-size: 1.15rem; font-weight: 700; margin-top: 0.15rem; }
+.fact .fact-note { font-size: 0.8rem; color: var(--ink-secondary); margin-top: 0.1rem; }
+
+/* ---------- Timeline (itinerary) ---------- */
+
+.timeline { margin: 1.4rem 0; }
+
+.tl-week { margin-bottom: 1.1rem; }
+
+.tl-week-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+  margin-bottom: 0.4rem;
+}
+
+.tl-blocks { display: flex; gap: 4px; border-radius: 8px; overflow: hidden; }
+
+.tl-block {
+  color: #ffffff;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+  min-width: 0;
+}
+
+.tl-block small { display: block; font-weight: 400; opacity: 0.9; }
+
+.tl-italy { background: var(--series-1); }
+.tl-greece { background: var(--series-2); }
+.tl-slovenia { background: var(--series-3); color: #0b0b0b; }
+.tl-transit { background: var(--ink-muted); }
+
+@media (prefers-color-scheme: dark) {
+  .tl-slovenia { color: #0b0b0b; }
+}
+
+/* Day-by-day list */
+.day-list { border-left: 3px solid var(--hairline); padding-left: 1rem; margin: 1rem 0 1.5rem; }
+.day-item { margin: 0.7rem 0; }
+.day-item .day-when { font-size: 0.8rem; font-weight: 700; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.day-item .day-what { margin-top: 0.1rem; }
+
+/* ---------- Charts ---------- */
+
+.viz-root {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem 0.8rem;
+  margin: 1.2rem 0;
+}
+
+.viz-title { font-weight: 700; margin: 0 0 0.15rem; font-size: 1rem; }
+.viz-sub { color: var(--ink-secondary); font-size: 0.85rem; margin: 0 0 0.6rem; }
+
+.viz-root svg { display: block; width: 100%; height: auto; }
+
+.viz-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.83rem;
+  color: var(--ink-secondary);
+}
+
+.viz-legend .key { display: inline-flex; align-items: center; gap: 0.35rem; }
+.viz-legend .swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
+.viz-note { font-size: 0.8rem; color: var(--ink-muted); margin-top: 0.5rem; }
+
+.viz-tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: var(--ink);
+  color: var(--page);
+  font-size: 0.8rem;
+  line-height: 1.35;
+  padding: 0.35rem 0.55rem;
+  border-radius: 6px;
+  max-width: 16rem;
+  z-index: 50;
+  opacity: 0;
+  transition: opacity 80ms linear;
+}
+
+.viz-tooltip.show { opacity: 1; }
+
+/* ---------- Comparison verdict rows ---------- */
+
+.verdict { font-weight: 700; }
+.verdict.go { color: var(--good); }
+.verdict.maybe { color: var(--warn-border); }
+.verdict.no { color: var(--ink-muted); }
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--hairline);
+  margin-top: 3rem;
+}
+
+.site-footer .footer-inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 1.2rem 1rem 2rem;
+  color: var(--ink-muted);
+  font-size: 0.85rem;
+}
+
+/* ---------- Utility ---------- */
+
+.small { font-size: 0.85rem; color: var(--ink-secondary); }
+.muted { color: var(--ink-muted); }
+.nowrap { white-space: nowrap; }
+
+details.sources { margin: 0.8rem 0 0; font-size: 0.85rem; color: var(--ink-secondary); }
+details.sources summary { cursor: pointer; color: var(--ink-muted); }
+details.sources ul { margin-top: 0.4rem; }
+
+@media (max-width: 640px) {
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.25rem; }
+  .tl-block { font-size: 0.75rem; padding: 0.4rem 0.5rem; }
+  .tl-block small { display: none; }
+}

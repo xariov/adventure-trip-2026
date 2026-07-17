@@ -18,6 +18,7 @@
   --series-2: #1baf7a; /* Kalymnos (Greece) */
   --series-3: #eda100; /* Slovenia */
   --series-4: #008300; /* Squamish (Canada) */
+  --series-5: #4a3aa7; /* stretch-week tails (Montenegro, Istria) */
 
   --radius: 10px;
   --content-width: 62rem;
@@ -42,6 +43,7 @@
     --series-2: #199e70;
     --series-3: #c98500;
     --series-4: #008300;
+    --series-5: #9085e9;
   }
 }
 
@@ -238,6 +240,7 @@ hr { border: none; border-top: 1px solid var(--hairline); margin: 2rem 0; }
 .card.region-greece { border-top: 3px solid var(--series-2); }
 .card.region-slovenia { border-top: 3px solid var(--series-3); }
 .card.region-other { border-top: 3px solid var(--series-4); }
+.card.region-stretch { border-top: 3px solid var(--series-5); }
 
 /* ---------- Badges and tags ---------- */
 
@@ -251,6 +254,11 @@ hr { border: none; border-top: 1px solid var(--hairline); margin: 2rem 0; }
   color: var(--ink-secondary);
   background: transparent;
   white-space: nowrap;
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .badge { white-space: normal; border-radius: 12px; }
 }
 
 .badge.solid { background: var(--accent-soft); color: var(--ink); border-color: transparent; }

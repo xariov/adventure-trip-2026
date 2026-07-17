@@ -64,6 +64,11 @@
     <tr><td>Arco → Kos (extension)</td><td>Bus/train to Bergamo, Ryanair direct to Kos (patterns run to 28 Sept and 21 Oct); easyJet and Neos also fly from Malpensa, Verona and Bologna</td><td class="num">EUR 50-100 + EUR 21-40 bag</td><td>1 day</td></tr>
     <tr><td>Kos airport → Kalymnos</td><td>Taxi 7 km to Mastichari (EUR 15-23 per car), ferry to Pothia (8+ daily), taxi to Massouri</td><td class="num">~EUR 20-30</td><td>~2 h</td></tr>
     <tr><td>Kalymnos → Athens (home leg)</td><td>Ferry + Kos-Athens flight (Aegean, Olympic, Sky Express; from EUR 50-70)</td><td class="num">EUR 70-120</td><td>~5-7 h</td></tr>
+    <tr><td>Arco → Catania (Sicily tail)</td><td>Bus/train to Bergamo or Venice, 1.5 h flight (Ryanair, Wizz, Volotea)</td><td class="num">EUR 40-90</td><td>1 day</td></tr>
+    <tr><td>Arco → Kotor (Montenegro tail)</td><td>Wizz Malpensa-Podgorica (2-3x weekly) + 2 h drive, or Ryanair Bergamo-Dubrovnik (2x weekly) + 2 h bus. The old Bergamo-Podgorica route no longer exists</td><td class="num">EUR 60-140</td><td>1 day</td></tr>
+    <tr><td>Arco → Ljubljana (Slovenia tail)</td><td>Bus to Rovereto, train to Verona, FlixBus direct</td><td class="num">~EUR 30-45</td><td>~7 h</td></tr>
+    <tr><td>Arco → Munich (Oktoberfest chain)</td><td>Bus to Rovereto, direct Railjet over the Brenner</td><td class="num">from EUR 28</td><td>~6 h</td></tr>
+    <tr><td>Venice → Rovinj (Istria tail)</td><td>Fast ferry (~3 h, runs to ~1 Oct) or FlixBus to Pula (~5 h), then hire car</td><td class="num">EUR 25-80</td><td>0.5-1 day</td></tr>
     <tr><td>Venice airport → Cortina (if reversing bases)</td><td>Cortina Express coach (from EUR 12.50) or FlixBus with a free 20 kg bag</td><td class="num">EUR 12-25</td><td>~2.5 h</td></tr>
   </tbody>
 </table>
@@ -81,10 +86,13 @@
 <table>
   <thead><tr><th>Destination</th><th class="num">EUR/day couple</th><th>What drives it</th></tr></thead>
   <tbody>
-    <tr><td>Kalymnos (late Sept-Oct)</td><td class="num">90-140</td><td>Studios EUR 25-60/night, taverna dinners ~EUR 20 pp, scooter EUR 10-15/day. Cheapest leg of the trip; book studios months ahead for October</td></tr>
+    <tr><td>Kalymnos (late Sept-Oct)</td><td class="num">90-140</td><td>Studios EUR 25-60/night, taverna dinners ~EUR 20 pp, scooter EUR 10-15/day. Cheapest of all; book studios months ahead for October</td></tr>
+    <tr><td>Montenegro (stretch tail)</td><td class="num">110-160</td><td>Includes the hire car. Guesthouse doubles EUR 45-70 on the bay, EUR 20-35 in Žabljak; konoba dinners ~EUR 40 for two</td></tr>
     <tr><td>Arco / Riva del Garda</td><td class="num">120-170</td><td>Apartments from ~EUR 70/night, pizzeria dinners EUR 10-18 pp, crags walkable, guest card often covers buses</td></tr>
-    <tr><td>Slovenia (if the tail goes there)</td><td class="num">120-180</td><td>Bovec and the Soča valley cheaper than Bled</td></tr>
+    <tr><td>Slovenia (stretch tail)</td><td class="num">180-260</td><td>Doubles EUR 85-160, canyoning day adds ~EUR 130 for two; Bovec cheaper than Bled</td></tr>
+    <tr><td>Istria + Plitvice (stretch tail)</td><td class="num">180-260</td><td>Boutique guesthouses EUR 80-130, konoba dinners EUR 50-80 for two; the truffle tasting menu (~EUR 90-130 pp) is the deliberate splurge</td></tr>
     <tr><td>Dolomites, Val Gardena / Val di Fassa</td><td class="num">140-190</td><td>Garni doubles EUR 100-130 with breakfast, rifugio lunches EUR 10-15 pp, guest pass makes buses free</td></tr>
+    <tr><td>Sicily + Aeolians (stretch tail)</td><td class="num">200-280</td><td>Island hotels EUR 80-200, hydrofoils EUR 60-80 pp across the week, Etna guide ~EUR 120-130 pp as the splurge</td></tr>
     <tr><td>Dolomites, Cortina</td><td class="num">190-260</td><td>30-50% premium over the valleys, amplified since the Olympics. We sleep here the fewest nights</td></tr>
   </tbody>
 </table>
@@ -113,6 +121,7 @@
   <li><strong>insure4less rock climbing plan</strong>: dedicated sport-climbing add-on to 3,500 m; quote-based.</li>
   <li><strong>World Nomads, caution</strong>: the activity list looks right, but the Australian help pages flag a professional-guide condition that would gut cover for independent climbing. Only with a current PDS check.</li>
   <li><strong>Fast Cover and SCTI: no</strong> - both require a licensed operator or instructor.</li>
+  <li><strong>If the stretch week is Sicily or Montenegro</strong>: check the trekking clauses too, not just the climbing ones. The guided Etna summit stands at 3,340 m (over Cover-More's 2,000 m climbing cap, and near common trekking altitude limits) and Bobotov Kuk's final scramble uses fixed cables; confirm both are inside the chosen policy's activity list before booking.</li>
   <li><strong>Worth adding regardless</strong>: Austrian Alpine Club membership (joinable by Australians, ~EUR 135 a year for a couple) includes mountain rescue to EUR 25,000 each, repatriation, and discounts at Alta Via rifugios. Cheap backstop; not a replacement for travel insurance (no cancellation or baggage cover, and the 24-hour emergency line must be called first).</li>
 </ul>
 
@@ -145,20 +154,29 @@
 renderBarChart("budget-chart", [
   { label: "Kalymnos", value: 115, display: "€90-140",
     color: "var(--series-2)",
-    note: "Studios €25-60/night, taverna dinners ~€20 pp, scooter €10-15/day. The cheapest leg." },
+    note: "Studios €25-60/night, taverna dinners ~€20 pp, scooter €10-15/day. The cheapest of all." },
+  { label: "Montenegro", value: 135, display: "€110-160",
+    color: "var(--series-5)",
+    note: "Stretch tail. Includes the hire car; roughly half Italian prices on rooms and food." },
   { label: "Arco / Riva", value: 145, display: "€120-170",
     color: "var(--series-1)",
     note: "Apartments from ~€70/night, walkable crags, cheap pizzerias." },
-  { label: "Slovenia", value: 150, display: "€120-180",
-    color: "var(--series-3)",
-    note: "If the tail goes here instead. Bovec cheaper than Bled." },
   { label: "Dolomites valleys", value: 165, display: "€140-190",
     color: "var(--series-1)",
     note: "Garni doubles €100-130 with breakfast; free guest-pass buses; rifugio lunches €10-15 pp." },
+  { label: "Slovenia", value: 220, display: "€180-260",
+    color: "var(--series-3)",
+    note: "Stretch tail. Doubles €85-160; the canyoning day is the spike." },
+  { label: "Istria", value: 220, display: "€180-260",
+    color: "var(--series-5)",
+    note: "Stretch tail. Guesthouses €80-130; the truffle tasting menu is the deliberate splurge." },
   { label: "Cortina", value: 225, display: "€190-260",
     color: "var(--series-1)",
-    note: "The premium node, amplified since the 2026 Olympics. We minimise nights here." }
-], { max: 260, ariaLabel: "Daily cost by destination for the couple" });
+    note: "The premium node, amplified since the 2026 Olympics. We minimise nights here." },
+  { label: "Sicily + Aeolians", value: 240, display: "€200-280",
+    color: "var(--series-1)",
+    note: "Stretch tail. Hydrofoils and the Etna guide push it up; still honest value for two volcanoes." }
+], { max: 280, ariaLabel: "Daily cost by destination for the couple" });
 </script>
 </body>
 </html>

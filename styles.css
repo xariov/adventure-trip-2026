@@ -369,6 +369,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .tl-greece { background: linear-gradient(135deg, #1baf7a, #0e7a54); }
 .tl-slovenia { background: linear-gradient(135deg, #eda100, #c98500); color: #0b0b0b; }
 .tl-transit { background: linear-gradient(135deg, #898781, #6e6c66); }
+.tl-open { background: linear-gradient(135deg, #7466c8, #4a3aa7); }
 
 @media (prefers-color-scheme: dark) {
   .tl-slovenia { color: #0b0b0b; }

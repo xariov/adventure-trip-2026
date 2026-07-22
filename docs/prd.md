@@ -8,7 +8,7 @@ Planning a multi-week, multi-destination adventure trip involves comparing regio
 
 ## Trip parameters (from Sam)
 
-- Travellers: Sam and Fran (friends, not a couple), departing from Brisbane, Australia.
+- Travellers: Sam and Fran, departing from Brisbane, Australia.
 - Dates: fixed at five weeks, departing 1 September 2026, returning in the 3-8 October window.
 - Shape: Italy first and capped at about two weeks (Dolomites hiking, then the lead course and gear in Arco); the remaining three weeks stay deliberately unplanned, chosen on the road from researched candidates (Montenegro, the Albanian Alps and Kalymnos lead).
 - Primary goal: complete a lead rope climbing course, buy one full climbing kit each (harnesses and shoes already owned), then optionally climb elsewhere. The course is the anchor; extra climbing is a bonus.

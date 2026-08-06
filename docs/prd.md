@@ -10,7 +10,7 @@ Planning a multi-week, multi-destination adventure trip involves comparing regio
 
 - Travellers: Sam and Fran, departing from Brisbane, Australia.
 - Dates: fixed at five weeks, departing 1 September 2026, returning in the 3-8 October window.
-- Shape: Italy first and capped at about two weeks (Dolomites hiking, then the lead course and gear in Arco); the remaining three weeks stay deliberately unplanned, chosen on the road from researched candidates (Montenegro, the Albanian Alps and Kalymnos lead).
+- Shape: booked in via Sydney, Singapore and Vienna (1-3 Sept); Dolomites then Arco for the first fortnight; Slovenia (~19-24 Sept); a German split (Fran to Berlin, Sam via Munich/Augsburg, then Berlin together); Kalymnos finale with the 2-4 Oct festival; home from Athens 6-7 Oct.
 - Primary goal: complete a lead rope climbing course, buy one full climbing kit each (harnesses and shoes already owned), then optionally climb elsewhere. The course is the anchor; extra climbing is a bonus.
 - Secondary goals: hiking, outdoor adventure, great food, amazing sights.
 - Not interested in generic tourist activities. A little nightlife only where it aligns with other plans.

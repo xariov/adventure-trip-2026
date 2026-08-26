@@ -473,3 +473,107 @@ details.sources ul { margin-top: 0.4rem; }
   .tl-block { font-size: 0.75rem; padding: 0.4rem 0.5rem; }
   .tl-block small { display: none; }
 }
+
+/* ---------- Search ---------- */
+
+.nav-search {
+  margin-left: auto;
+  font: inherit;
+  font-size: 0.88rem;
+  color: var(--ink-secondary);
+  background: none;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  padding: 0.12rem 0.8rem;
+  cursor: pointer;
+}
+
+.nav-search:hover { color: var(--ink); border-color: var(--ink-muted); }
+
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10vh 1rem 1rem;
+}
+
+.search-panel {
+  width: 100%;
+  max-width: 40rem;
+  max-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.search-input {
+  font: inherit;
+  font-size: 1.05rem;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--hairline);
+  padding: 0.85rem 1rem;
+  width: 100%;
+}
+
+.search-results {
+  list-style: none;
+  margin: 0;
+  padding: 0.3rem;
+  overflow-y: auto;
+}
+
+.search-results button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--ink-secondary);
+  background: none;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+}
+
+.search-results li.active button,
+.search-results button:hover {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.search-result-where {
+  display: block;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--ink);
+}
+
+.search-result-snippet mark {
+  background: transparent;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.search-empty {
+  margin: 0;
+  padding: 0.8rem 1rem;
+  color: var(--ink-muted);
+}
+
+@media (max-width: 640px) {
+  .search-overlay { padding-top: 3vh; }
+  .search-panel { max-height: 85vh; }
+}

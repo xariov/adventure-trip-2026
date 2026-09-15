@@ -27,7 +27,8 @@
           sl: sl,
           say: cells[1].textContent.trim(),
           en: cells[2].textContent.trim(),
-          note: cells[3] ? cells[3].textContent.trim() : ""
+          note: cells[3] ? cells[3].textContent.trim() : "",
+          mnemonic: cells[4] ? cells[4].innerHTML.trim() : ""
         });
       });
     });
@@ -66,6 +67,7 @@
   var order = [];     // indices into `all` for the current filter
   var pos = 0;
   var flipped = false;
+  var hinted = false;
 
   function shuffleArray(arr) {
     for (var i = arr.length - 1; i > 0; i--) {
@@ -85,6 +87,7 @@
     if (shuffle) shuffleArray(order);
     pos = 0;
     flipped = false;
+    hinted = false;
     render();
   }
 
@@ -97,6 +100,9 @@
     backMain: document.getElementById("card-back-main"),
     backSub: document.getElementById("card-back-sub"),
     backNote: document.getElementById("card-back-note"),
+    backMnemonic: document.getElementById("card-back-mnemonic"),
+    frontMnemonic: document.getElementById("card-front-mnemonic"),
+    hint: document.getElementById("deck-hint"),
     empty: document.getElementById("deck-empty"),
     fill: document.getElementById("deck-progress-fill"),
     progress: document.getElementById("deck-progress-text"),
@@ -119,7 +125,7 @@
     var hasCards = !!c;
     els.card.hidden = !hasCards;
     els.empty.hidden = hasCards;
-    [els.prev, els.next, els.again, els.got, els.speak].forEach(function (b) { b.disabled = !hasCards; });
+    [els.prev, els.next, els.again, els.got, els.speak, els.hint].forEach(function (b) { b.disabled = !hasCards; });
 
     // progress for the visible category (ignoring the learning-only filter)
     var inScope = all.filter(function (x) { return state.category === "All" || x.category === state.category; });
@@ -142,6 +148,11 @@
     els.backMain.textContent = back.main;
     els.backSub.textContent = back.sub;
     els.backNote.textContent = c.note;
+    els.backMnemonic.innerHTML = c.mnemonic;
+    els.frontMnemonic.innerHTML = c.mnemonic;
+    els.hint.hidden = !c.mnemonic;
+    els.card.classList.toggle("is-hinted", hinted && !!c.mnemonic);
+    els.hint.setAttribute("aria-pressed", hinted ? "true" : "false");
 
     els.card.classList.toggle("is-flipped", flipped);
     els.card.classList.toggle("is-known", !!state.known[c.id]);
@@ -153,6 +164,7 @@
     if (!order.length) return;
     pos = (pos + delta + order.length) % order.length;
     flipped = false;
+    hinted = false;
     render();
     els.card.classList.add("swap");
   }
@@ -161,6 +173,13 @@
     if (!order.length) return;
     flipped = !flipped;
     els.card.classList.toggle("is-flipped", flipped);
+  }
+
+  function toggleHint() {
+    if (!order.length) return;
+    hinted = !hinted;
+    els.card.classList.toggle("is-hinted", hinted);
+    els.hint.setAttribute("aria-pressed", hinted ? "true" : "false");
   }
 
   function mark(isKnown) {
@@ -172,6 +191,7 @@
       order.splice(pos, 1);
       if (pos >= order.length) pos = 0;
       flipped = false;
+      hinted = false;
       render();
     } else {
       move(1);
@@ -235,6 +255,7 @@
   els.again.addEventListener("click", function () { mark(false); });
   els.got.addEventListener("click", function () { mark(true); });
   els.shuffle.addEventListener("click", function () { rebuild(true); });
+  els.hint.addEventListener("click", toggleHint);
   els.speak.addEventListener("click", function (e) { e.stopPropagation(); speak(); });
 
   els.direction.checked = state.englishFirst;
@@ -270,6 +291,7 @@
       case " ": case "Enter":
         if (e.target === els.card || tag !== "BUTTON") { e.preventDefault(); flip(); }
         break;
+      case "h": case "H": toggleHint(); break;
       case "1": mark(false); break;
       case "2": mark(true); break;
       default: return;

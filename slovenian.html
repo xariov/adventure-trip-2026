@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slovenian - Samthing Frantastic</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧗</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Samthing Frantastic</a>
+    <a class="nav-link" href="index.html">Overview</a>
+    <a class="nav-link" href="destinations.html">Destinations</a>
+    <a class="nav-link" href="course.html">Lead course</a>
+    <a class="nav-link" href="itinerary.html">Itinerary</a>
+    <a class="nav-link" href="food-and-sights.html">Food + sights</a>
+    <a class="nav-link" href="gear.html">Gear</a>
+    <a class="nav-link" href="logistics.html">Logistics</a>
+    <a class="nav-link" href="decisions.html">Decisions</a>
+    <a class="nav-link" href="slovenian.html" aria-current="page">Slovenian</a>
+  </div>
+</nav>
+
+<main>
+<h1>Slovenian flashcards</h1>
+<p class="lede">Enough Slovenian for the week of 19-24 September: greetings, the please-and-thank-you layer, ordering, asking the way, a room, the numbers, and the words that matter at a crag or on a trail. Tap a card to flip it, mark it known or not, and the deck remembers on this device.</p>
+
+<div class="callout">
+  <p class="callout-title">How to read the pronunciations</p>
+  <p>Capitals mark the stressed syllable. The sounds that trip up English speakers: <strong>c</strong> is always "ts" (as in <em>cats</em>), <strong>č</strong> is "ch", <strong>š</strong> is "sh", <strong>ž</strong> is "zh" (the s in <em>measure</em>), <strong>j</strong> is "y", <strong>h</strong> is a rough "h" (as in Scottish <em>loch</em>), <strong>r</strong> is rolled, and every letter is pronounced, so there are no silent vowels. An <strong>l</strong> or <strong>v</strong> at the end of a word or before a consonant softens to a "w" (<em>bil</em> sounds like "beew", <em>v redu</em> like "oo REH-doo"). Vowels are short and clean: a as in <em>father</em>, e as in <em>bet</em>, i as "ee", o as in <em>sort</em>, u as "oo".</p>
+</div>
+
+<section class="deck" id="deck" aria-label="Flashcard deck">
+  <div class="deck-toolbar">
+    <div class="deck-chips" id="deck-categories" role="group" aria-label="Choose a category"></div>
+    <div class="deck-options">
+      <label class="deck-toggle"><input type="checkbox" id="deck-direction"> Show English first</label>
+      <label class="deck-toggle"><input type="checkbox" id="deck-learning-only"> Only cards I haven't got yet</label>
+      <button type="button" class="deck-btn" id="deck-shuffle">Shuffle</button>
+    </div>
+  </div>
+
+  <div class="deck-progress">
+    <div class="deck-progress-bar"><div class="deck-progress-fill" id="deck-progress-fill"></div></div>
+    <div class="deck-progress-text" id="deck-progress-text"></div>
+  </div>
+
+  <div class="flashcard-stage">
+    <button type="button" class="flashcard" id="flashcard" aria-live="polite" aria-label="Flashcard, press to flip">
+      <div class="flashcard-inner">
+        <div class="flashcard-face flashcard-front">
+          <div class="flashcard-category" id="card-front-category"></div>
+          <div class="flashcard-main" id="card-front-main"></div>
+          <div class="flashcard-sub" id="card-front-sub"></div>
+          <div class="flashcard-hint">tap to flip</div>
+        </div>
+        <div class="flashcard-face flashcard-back">
+          <div class="flashcard-category" id="card-back-category"></div>
+          <div class="flashcard-main" id="card-back-main"></div>
+          <div class="flashcard-sub" id="card-back-sub"></div>
+          <div class="flashcard-note" id="card-back-note"></div>
+        </div>
+      </div>
+    </button>
+    <p class="deck-empty" id="deck-empty" hidden>Every card in this set is marked as known. Untick the filter or reset to go again.</p>
+  </div>
+
+  <div class="deck-controls">
+    <button type="button" class="deck-btn" id="deck-prev" aria-label="Previous card">&larr; Prev</button>
+    <button type="button" class="deck-btn deck-btn-again" id="deck-again">Not yet</button>
+    <button type="button" class="deck-btn deck-btn-got" id="deck-got">Got it</button>
+    <button type="button" class="deck-btn" id="deck-next" aria-label="Next card">Next &rarr;</button>
+    <button type="button" class="deck-btn deck-btn-speak" id="deck-speak" hidden aria-label="Hear it spoken">&#9654; Hear it</button>
+  </div>
+  <p class="small deck-keys"><span class="deck-keys-hint">Keyboard: <kbd>&larr;</kbd> <kbd>&rarr;</kbd> to move, <kbd>space</kbd> to flip, <kbd>1</kbd> not yet, <kbd>2</kbd> got it.</span> <button type="button" class="deck-link" id="deck-reset">Reset progress</button></p>
+</section>
+
+<h2>Greetings</h2>
+<p>Slovenians say hello a lot: walking into a shop, passing on a trail, sitting down in a hut. <em>Dober dan</em> covers almost everything from mid-morning to dusk; <em>živjo</em> is what you say to someone your own age at the crag.</p>
+<div class="table-wrap phrase-group" data-category="Greetings">
+<table>
+<thead><tr><th>Slovenian</th><th>Say it</th><th>English</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>Dober dan</td><td>DOH-ber DAHN</td><td>Hello / good day</td><td>The safe default from about 10am until evening.</td></tr>
+<tr><td>Dobro jutro</td><td>DOH-bro YOO-tro</td><td>Good morning</td><td>Until roughly 10am.</td></tr>
+<tr><td>Dober večer</td><td>DOH-ber veh-CHEHR</td><td>Good evening</td><td></td></tr>
+<tr><td>Lahko noč</td><td>LAH-ko NOHCH</td><td>Good night</td><td>Only when someone is actually off to bed.</td></tr>
+<tr><td>Živjo</td><td>ZHEE-vyo</td><td>Hi</td><td>Informal, both hello and bye.</td></tr>
+<tr><td>Zdravo</td><td>ZDRAH-vo</td><td>Hello</td><td>Friendly and slightly less casual than živjo.</td></tr>
+<tr><td>Nasvidenje</td><td>nah-SVEE-den-yeh</td><td>Goodbye</td><td>The polite one; works everywhere.</td></tr>
+<tr><td>Adijo</td><td>ah-DEE-yo</td><td>Bye</td><td>Informal, very common.</td></tr>
+<tr><td>Se vidimo</td><td>seh VEE-dee-mo</td><td>See you</td><td></td></tr>
+<tr><td>Kako ste?</td><td>KAH-ko steh</td><td>How are you? (polite)</td><td>Use with strangers, hosts, anyone older.</td></tr>
+<tr><td>Kako si?</td><td>KAH-ko see</td><td>How are you? (informal)</td><td></td></tr>
+<tr><td>Dobro, hvala. Pa vi?</td><td>DOH-bro, HVAH-la. pah VEE</td><td>Good, thanks. And you?</td><td></td></tr>
+<tr><td>Jaz sem Sam.</td><td>yahz sem SAM</td><td>I am Sam.</td><td>Swap in Fran: <em>Jaz sem Fran.</em></td></tr>
+<tr><td>Kako vam je ime?</td><td>KAH-ko vahm yeh ee-MEH</td><td>What is your name? (polite)</td><td></td></tr>
+<tr><td>Me veseli.</td><td>meh veh-seh-LEE</td><td>Nice to meet you.</td><td></td></tr>
+<tr><td>Sva iz Avstralije.</td><td>svah eez ow-STRAH-lee-yeh</td><td>We (the two of us) are from Australia.</td><td>Slovenian has a special "we two" form, the dual. Locals love hearing it used.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Niceties</h2>
+<p>The layer that makes everything else land. <em>Prosim</em> does triple duty: please, you're welcome, and "here you go" when handing something over. <em>Hvala</em> after every transaction, every plate, every lift.</p>
+<div class="table-wrap phrase-group" data-category="Niceties">
+<table>
+<thead><tr><th>Slovenian</th><th>Say it</th><th>English</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>Prosim</td><td>PRO-seem</td><td>Please / you're welcome / here you go</td><td>Also "pardon?" when you didn't catch something.</td></tr>
+<tr><td>Hvala</td><td>HVAH-la</td><td>Thank you</td><td>The h is rough, not silent.</td></tr>
+<tr><td>Hvala lepa</td><td>HVAH-la LEH-pa</td><td>Thank you very much</td><td>Literally "nice thanks".</td></tr>
+<tr><td>Ni za kaj</td><td>nee zah KAI</td><td>You're welcome / no worries</td><td></td></tr>
+<tr><td>Oprostite</td><td>o-pro-STEE-teh</td><td>Excuse me / sorry (polite)</td><td>To get attention or squeeze past.</td></tr>
+<tr><td>Oprosti</td><td>o-PRO-stee</td><td>Sorry (informal)</td><td></td></tr>
+<tr><td>Ja</td><td>yah</td><td>Yes</td><td><em>Da</em> is the formal written form; people say <em>ja</em>.</td></tr>
+<tr><td>Ne</td><td>neh</td><td>No</td><td></td></tr>
+<tr><td>Mogoče</td><td>mo-GO-cheh</td><td>Maybe</td><td></td></tr>
+<tr><td>V redu</td><td>oo REH-doo</td><td>OK / fine</td><td>The v softens to a "w" before the r.</td></tr>
+<tr><td>Super!</td><td>SOO-per</td><td>Great!</td><td>Used constantly.</td></tr>
+<tr><td>Na zdravje!</td><td>nah ZDRAHV-yeh</td><td>Cheers! (and bless you)</td><td>Look people in the eye when you clink.</td></tr>
+<tr><td>Dober tek!</td><td>DOH-ber TEK</td><td>Enjoy your meal</td><td>Said to anyone eating nearby, including strangers.</td></tr>
+<tr><td>Srečno pot!</td><td>SRECH-no POHT</td><td>Have a good trip / safe travels</td><td>Also what you'll hear leaving a hut.</td></tr>
+<tr><td>Ali govorite angleško?</td><td>AH-lee go-vo-REE-teh an-GLESH-ko</td><td>Do you speak English?</td><td>Most people under 50 do, very well.</td></tr>
+<tr><td>Ne govorim slovensko.</td><td>neh go-vo-REEM slo-VEN-sko</td><td>I don't speak Slovenian.</td><td></td></tr>
+<tr><td>Malo.</td><td>MAH-lo</td><td>A little.</td><td>The honest answer to "govorite slovensko?"</td></tr>
+<tr><td>Ne razumem.</td><td>neh rah-ZOO-mem</td><td>I don't understand.</td><td></td></tr>
+<tr><td>Lahko ponovite, prosim?</td><td>LAH-ko po-no-VEE-teh, PRO-seem</td><td>Could you repeat that, please?</td><td></td></tr>
+<tr><td>Počasi, prosim.</td><td>po-CHAH-see, PRO-seem</td><td>Slowly, please.</td><td></td></tr>
+<tr><td>Kako se reče ... po slovensko?</td><td>KAH-ko seh REH-cheh ... po slo-VEN-sko</td><td>How do you say ... in Slovenian?</td><td>The question that turns a bar into a lesson.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Getting around</h2>
+<p>Most of the week is the hire car, so this is signs, car parks, the odd bus, and asking a local where the path actually starts.</p>
+<div class="table-wrap phrase-group" data-category="Getting around">
+<table>
+<thead><tr><th>Slovenian</th><th>Say it</th><th>English</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>Kje je ...?</td><td>kyeh yeh</td><td>Where is ...?</td><td>Then point at the map or name the place.</td></tr>
+<tr><td>Kje je stranišče?</td><td>kyeh yeh stra-NEESH-cheh</td><td>Where is the toilet?</td><td>Also just <em>WC</em>, said "veh-TSEH".</td></tr>
+<tr><td>Kje je železniška postaja?</td><td>kyeh yeh zheh-LEZ-neesh-ka po-STAH-ya</td><td>Where is the train station?</td><td>For the Munich train on the 24th.</td></tr>
+<tr><td>Avtobusna postaja</td><td>ow-to-BOOS-na po-STAH-ya</td><td>Bus station</td><td>Right next to the train station in Ljubljana.</td></tr>
+<tr><td>Levo / desno</td><td>LEH-vo / DES-no</td><td>Left / right</td><td></td></tr>
+<tr><td>Naravnost</td><td>na-RAHV-nost</td><td>Straight ahead</td><td></td></tr>
+<tr><td>Koliko je daleč?</td><td>KO-lee-ko yeh DAH-lech</td><td>How far is it?</td><td></td></tr>
+<tr><td>Eno vozovnico do Bleda, prosim.</td><td>EH-no vo-ZOV-nee-tso do BLEH-da, PRO-seem</td><td>One ticket to Bled, please.</td><td>Place names change ending: Bled becomes <em>Bleda</em>, Bovec <em>Bovca</em>.</td></tr>
+<tr><td>Parkirišče</td><td>par-KEE-reesh-cheh</td><td>Car park</td><td></td></tr>
+<tr><td>Kje lahko parkiram?</td><td>kyeh LAH-ko par-KEE-ram</td><td>Where can I park?</td><td></td></tr>
+<tr><td>Bencinska črpalka</td><td>ben-TSEEN-ska chr-PAHL-ka</td><td>Petrol station</td><td></td></tr>
+<tr><td>Zemljevid</td><td>zem-lyeh-VEED</td><td>Map</td><td></td></tr>
+<tr><td>Pot / steza</td><td>poht / STEH-za</td><td>Path / trail</td><td><em>Planinska pot</em> is a marked mountain trail.</td></tr>
+<tr><td>Vrh</td><td>vrrh</td><td>Summit</td><td>The r carries the syllable; no vowel at all.</td></tr>
+<tr><td>Koča</td><td>KO-cha</td><td>Mountain hut</td><td><em>Dom</em> is the bigger kind.</td></tr>
+<tr><td>Jezero</td><td>YEH-zeh-ro</td><td>Lake</td><td>Blejsko jezero, Bohinjsko jezero.</td></tr>
+<tr><td>Slap</td><td>slahp</td><td>Waterfall</td><td>Slap Savica above Bohinj, Slap Boka near Bovec.</td></tr>
+<tr><td>Soteska</td><td>so-TES-ka</td><td>Gorge</td><td>Vintgar and Tolmin are both <em>soteska</em>.</td></tr>
+<tr><td>Prelaz</td><td>PREH-laz</td><td>Mountain pass</td><td>Prelaz Vršič, the road into the Soča valley.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Food and drink</h2>
+<p>The kremšnita in Bled, trout in Bovec, and the Friday food market in Ljubljana are on <a href="food-and-sights.html">Food + sights</a>; this is how to get them onto the table.</p>
+<div class="table-wrap phrase-group" data-category="Food and drink">
+<table>
+<thead><tr><th>Slovenian</th><th>Say it</th><th>English</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>Mizo za dva, prosim.</td><td>MEE-zo zah DVAH, PRO-seem</td><td>A table for two, please.</td><td></td></tr>
+<tr><td>Jedilni list, prosim.</td><td>yeh-DEEL-nee leest, PRO-seem</td><td>The menu, please.</td><td>Or just <em>meni</em>, which is also understood.</td></tr>
+<tr><td>Kaj priporočate?</td><td>kai pree-po-RO-cha-teh</td><td>What do you recommend?</td><td>Almost always gets a good answer.</td></tr>
+<tr><td>Eno kavo, prosim.</td><td>EH-no KAH-vo, PRO-seem</td><td>One coffee, please.</td><td>Default coffee is a small espresso; ask for <em>kava z mlekom</em> for milk.</td></tr>
+<tr><td>Eno pivo, prosim.</td><td>EH-no PEE-vo, PRO-seem</td><td>One beer, please.</td><td><em>Veliko</em> is large (0.5 l), <em>malo</em> is small.</td></tr>
+<tr><td>Dve pivi, prosim.</td><td>DVEH PEE-vee, PRO-seem</td><td>Two beers, please.</td><td>Dual again: two of anything gets its own ending.</td></tr>
+<tr><td>Kozarec vina</td><td>ko-ZAH-rets VEE-na</td><td>A glass of wine</td><td><em>Belo</em> white, <em>rdeče</em> red.</td></tr>
+<tr><td>Voda</td><td>VO-da</td><td>Water</td><td></td></tr>
+<tr><td>Vodo iz pipe, prosim.</td><td>VO-do eez PEE-peh, PRO-seem</td><td>Tap water, please.</td><td>Tap water is excellent everywhere in Slovenia.</td></tr>
+<tr><td>Brez mesa, prosim.</td><td>brez MEH-sa, PRO-seem</td><td>Without meat, please.</td><td></td></tr>
+<tr><td>Sem alergičen / alergična na ...</td><td>sem ah-LEHR-gee-chen / ah-LEHR-geech-na nah</td><td>I am allergic to ... (m / f)</td><td>Nuts <em>oreški</em>, gluten <em>gluten</em>, milk <em>mleko</em>.</td></tr>
+<tr><td>Račun, prosim.</td><td>rah-CHOON, PRO-seem</td><td>The bill, please.</td><td>Tipping: round up or about 10% when it was good.</td></tr>
+<tr><td>Je bilo odlično.</td><td>yeh BEE-lo od-LEECH-no</td><td>It was excellent.</td><td></td></tr>
+<tr><td>Zajtrk / kosilo / večerja</td><td>ZAI-trk / ko-SEE-lo / veh-CHEHR-ya</td><td>Breakfast / lunch / dinner</td><td></td></tr>
+<tr><td>Kremšnita</td><td>KREM-shnee-ta</td><td>Bled cream cake</td><td>Vanilla custard and cream between puff pastry.</td></tr>
+<tr><td>Postrv</td><td>POH-strv</td><td>Trout</td><td>The Soča kind is <em>soška postrv</em>.</td></tr>
+<tr><td>Štruklji</td><td>SHTROOK-lyee</td><td>Rolled dumplings</td><td>Sweet or savoury; hut food.</td></tr>
+<tr><td>Jota</td><td>YO-ta</td><td>Bean, sauerkraut and potato stew</td><td>What you want after a cold day.</td></tr>
+<tr><td>Burek</td><td>BOO-rek</td><td>Filled filo pastry</td><td>Meat, cheese or spinach; the late-night food of Ljubljana.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Shopping and money</h2>
+<div class="table-wrap phrase-group" data-category="Shopping and money">
+<table>
+<thead><tr><th>Slovenian</th><th>Say it</th><th>English</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>Koliko stane?</td><td>KO-lee-ko STAH-neh</td><td>How much is it?</td><td></td></tr>
+<tr><td>Lahko plačam s kartico?</td><td>LAH-ko PLAH-cham s KAR-tee-tso</td><td>Can I pay by card?</td><td>Cards are fine almost everywhere; huts and markets sometimes want cash.</td></tr>
+<tr><td>Gotovina</td><td>go-to-VEE-na</td><td>Cash</td><td></td></tr>
+<tr><td>Bankomat</td><td>BAHN-ko-maht</td><td>ATM</td><td></td></tr>
+<tr><td>Odprto / zaprto</td><td>od-PR-to / za-PR-to</td><td>Open / closed</td><td>On shop doors.</td></tr>
+<tr><td>Trgovina</td><td>tr-go-VEE-na</td><td>Shop</td><td></td></tr>
+<tr><td>Tržnica</td><td>TRZH-nee-tsa</td><td>Market</td><td>Ljubljana's central market is by the river.</td></tr>
+<tr><td>Lekarna</td><td>leh-KAHR-na</td><td>Pharmacy</td><td></td></tr>
+<tr><td>Vinjeta</td><td>vee-NYEH-ta</td><td>Motorway toll sticker</td><td>Included with the hire car; the word is on every motorway sign.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Somewhere to sleep</h2>
+<div class="table-wrap phrase-group" data-category="Somewhere to sleep">
+<table>
+<thead><tr><th>Slovenian</th><th>Say it</th><th>English</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>Imam rezervacijo.</td><td>EE-mam reh-zer-VAH-tsee-yo</td><td>I have a reservation.</td><td></td></tr>
+<tr><td>Imate prosto sobo?</td><td>ee-MAH-teh PRO-sto SO-bo</td><td>Do you have a room free?</td><td></td></tr>
+<tr><td>Za dve noči.</td><td>zah DVEH NO-chee</td><td>For two nights.</td><td></td></tr>
+<tr><td>Je zajtrk vključen?</td><td>yeh ZAI-trk vklyoo-CHEN</td><td>Is breakfast included?</td><td></td></tr>
+<tr><td>Kakšno je geslo za wifi?</td><td>KAHK-shno yeh GES-lo zah WEE-fee</td><td>What's the wifi password?</td><td></td></tr>
+<tr><td>Turistična taksa</td><td>too-REES-teech-na TAK-sa</td><td>Tourist tax</td><td>A few euros per person per night, usually paid in cash at checkout.</td></tr>
+<tr><td>Ključ</td><td>klyooch</td><td>Key</td><td></td></tr>
+<tr><td>Kje lahko posušim opremo?</td><td>kyeh LAH-ko po-SOO-sheem o-PREH-mo</td><td>Where can I dry my gear?</td><td>Every hut has a drying room; ask for the <em>sušilnica</em>.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Numbers and time</h2>
+<p>Numbers get you through prices, bus times, and the hut warden asking how many for dinner.</p>
+<div class="table-wrap phrase-group" data-category="Numbers and time">
+<table>
+<thead><tr><th>Slovenian</th><th>Say it</th><th>English</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>Ena, dve, tri</td><td>EH-na, DVEH, TREE</td><td>One, two, three</td><td></td></tr>
+<tr><td>Štiri, pet, šest</td><td>SHTEE-ree, PEHT, SHEST</td><td>Four, five, six</td><td></td></tr>
+<tr><td>Sedem, osem, devet, deset</td><td>SEH-dem, OH-sem, deh-VEHT, deh-SEHT</td><td>Seven, eight, nine, ten</td><td></td></tr>
+<tr><td>Dvajset, petdeset, sto</td><td>DVAI-set, pet-deh-SEHT, STOH</td><td>Twenty, fifty, one hundred</td><td></td></tr>
+<tr><td>Koliko je ura?</td><td>KO-lee-ko yeh OO-ra</td><td>What time is it?</td><td></td></tr>
+<tr><td>Ob kateri uri?</td><td>ob ka-TEH-ree OO-ree</td><td>At what time?</td><td>For the canyoning pickup or the pass shuttle.</td></tr>
+<tr><td>Danes / jutri / včeraj</td><td>DAH-nes / YOO-tree / VCHEH-rai</td><td>Today / tomorrow / yesterday</td><td></td></tr>
+<tr><td>Zjutraj / popoldne / zvečer</td><td>ZYOO-trai / po-POLD-neh / zveh-CHEHR</td><td>In the morning / afternoon / evening</td><td></td></tr>
+<tr><td>Petek / sobota / nedelja</td><td>PEH-tek / so-BO-ta / neh-DEH-lya</td><td>Friday / Saturday / Sunday</td><td>Odprta kuhna, the Ljubljana food market, is Fridays.</td></tr>
+<tr><td>Zdaj / pozneje</td><td>zdai / poz-NEH-yeh</td><td>Now / later</td><td></td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Help and emergencies</h2>
+<p>The emergency number is 112 across Slovenia and operators speak English. Mountain rescue is free for members of a partner alpine club and otherwise billed, which is one of the reasons the insurance on <a href="logistics.html">Logistics</a> covers via ferrata and climbing.</p>
+<div class="table-wrap phrase-group" data-category="Help and emergencies">
+<table>
+<thead><tr><th>Slovenian</th><th>Say it</th><th>English</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>Na pomoč!</td><td>nah po-MOHCH</td><td>Help!</td><td></td></tr>
+<tr><td>Pokličite 112.</td><td>po-KLEE-chee-teh STOH dvah-NAIST</td><td>Call 112.</td><td>Police, fire, ambulance and mountain rescue all route through 112.</td></tr>
+<tr><td>Pokličite rešilca.</td><td>po-KLEE-chee-teh reh-SHEEL-tsa</td><td>Call an ambulance.</td><td></td></tr>
+<tr><td>Potrebujem zdravnika.</td><td>po-treh-BOO-yem zdrav-NEE-ka</td><td>I need a doctor.</td><td></td></tr>
+<tr><td>Bolnišnica</td><td>bol-NEESH-nee-tsa</td><td>Hospital</td><td>Jesenice for Bled and Bohinj; Ljubljana for anything serious.</td></tr>
+<tr><td>Boli me tukaj.</td><td>bo-LEE meh TOO-kai</td><td>It hurts here.</td><td></td></tr>
+<tr><td>Izgubil / izgubila sem se.</td><td>eez-GOO-beew / eez-goo-BEE-la sem seh</td><td>I'm lost. (m / f)</td><td>The l at the end of <em>izgubil</em> is a "w".</td></tr>
+<tr><td>Nesreča</td><td>neh-SREH-cha</td><td>Accident</td><td></td></tr>
+<tr><td>Policija</td><td>po-LEE-tsee-ya</td><td>Police</td><td></td></tr>
+<tr><td>Gorska reševalna služba</td><td>GOR-ska reh-sheh-VAHL-na SLOOZH-ba</td><td>Mountain rescue</td><td>GRS on the signs and helicopters.</td></tr>
+<tr><td>Nujno je.</td><td>NOOY-no yeh</td><td>It's urgent.</td><td></td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>At the crag and on the trail</h2>
+<p>Osp and Mišja Peč are international crags and the belay calls are usually English, but the guidebook, the weather board at the hut and the local at the next route are not.</p>
+<div class="table-wrap phrase-group" data-category="Crag and trail">
+<table>
+<thead><tr><th>Slovenian</th><th>Say it</th><th>English</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>Plezanje</td><td>PLEH-zan-yeh</td><td>Climbing</td><td><em>Športno plezanje</em> is sport climbing.</td></tr>
+<tr><td>Plezališče</td><td>pleh-ZAH-leesh-cheh</td><td>Crag / climbing area</td><td>Plezališče Osp, Plezališče Mišja Peč.</td></tr>
+<tr><td>Smer</td><td>smehr</td><td>Route</td><td>Literally "direction".</td></tr>
+<tr><td>Vrv</td><td>vrrv</td><td>Rope</td><td>Another vowel-free word; hum the r.</td></tr>
+<tr><td>Plezalni pas</td><td>pleh-ZAHL-nee PAHS</td><td>Harness</td><td></td></tr>
+<tr><td>Čelada</td><td>cheh-LAH-da</td><td>Helmet</td><td></td></tr>
+<tr><td>Plezalni vodnik</td><td>pleh-ZAHL-nee VOD-neek</td><td>Climbing guidebook</td><td>Also the word for a human guide.</td></tr>
+<tr><td>Pohodništvo</td><td>po-HOD-neesh-tvo</td><td>Hiking</td><td></td></tr>
+<tr><td>Je pot zahtevna?</td><td>yeh poht zah-TEV-na</td><td>Is the trail difficult?</td><td><em>Zahtevna</em> on a sign means it has fixed cables; <em>zelo zahtevna</em> is proper via ferrata.</td></tr>
+<tr><td>Kakšno bo vreme?</td><td>KAHK-shno bo VREH-meh</td><td>What will the weather be like?</td><td></td></tr>
+<tr><td>Dež / sonce / nevihta</td><td>dezh / SON-tseh / neh-VEEH-ta</td><td>Rain / sun / thunderstorm</td><td>Afternoon storms are the thing to plan around in September.</td></tr>
+<tr><td>Kajak / kanjoning</td><td>KAH-yak / KAN-yo-ning</td><td>Kayak / canyoning</td><td>The Soča operators use the English words too.</td></tr>
+<tr><td>Kje se začne pot?</td><td>kyeh seh ZAHCH-neh poht</td><td>Where does the trail start?</td><td></td></tr>
+<tr><td>Lepo.</td><td>LEH-po</td><td>Beautiful.</td><td>What you'll be saying most of the week.</td></tr>
+</tbody>
+</table>
+</div>
+
+<details class="sources">
+  <summary>Sources and conventions</summary>
+  <ul>
+    <li>Phrases follow standard Slovenian as spoken in Ljubljana and the Julian Alps. Coastal and Soča dialects vary in accent but the standard forms are understood everywhere.</li>
+    <li>Pronunciations are English-speaker approximations in the style of the Lonely Planet and Rick Steves phrasebooks, with stress marked in capitals. They are close rather than exact; the vowel lengths and pitch accent of native speech are not marked.</li>
+    <li>Emergency number 112 covers the whole country (Administration for Civil Protection and Disaster Relief); mountain rescue is the Gorska reševalna zveza Slovenije.</li>
+  </ul>
+</details>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">Researched July 2026 for Sam and Fran. Prices and availability change; verify before booking.</div>
+</footer>
+<script src="site.js"></script>
+<script src="flashcards.js"></script>
+</body>
+</html>

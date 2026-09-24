@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Greek - Samthing Frantastic</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧗</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Samthing Frantastic</a>
+    <a class="nav-link" href="index.html">Overview</a>
+    <a class="nav-link" href="destinations.html">Destinations</a>
+    <a class="nav-link" href="course.html">Lead course</a>
+    <a class="nav-link" href="itinerary.html">Itinerary</a>
+    <a class="nav-link" href="food-and-sights.html">Food + sights</a>
+    <a class="nav-link" href="gear.html">Gear</a>
+    <a class="nav-link" href="logistics.html">Logistics</a>
+    <a class="nav-link" href="decisions.html">Decisions</a>
+    <a class="nav-link" href="slovenian.html">Slovenian</a>
+    <a class="nav-link" href="greek.html" aria-current="page">Greek</a>
+  </div>
+</nav>
+
+<main>
+<h1>Greek flashcards</h1>
+<p class="lede">Enough Greek for Kalymnos and an Athens day: greetings, the please-and-thank-you layer, the ferry and the scooter, the taverna, the numbers, and the words that matter at the crag and in the water. Every card carries a memory hook. Tap a card to flip it, press Hint if you're stuck, mark it known or not, and the deck remembers on this device.</p>
+
+<div class="callout">
+  <p class="callout-title">How to read the pronunciations</p>
+  <p>Capitals mark the stressed syllable, and Greek marks it too: the accent over a vowel is the stress, so read it off the word. Every vowel is short and clean, and there are only five sounds: a as in <em>father</em>, e as in <em>bet</em>, i as "ee" (spelled η, ι, υ, ει or οι, all the same sound), o as in <em>sort</em>, ou as "oo". The consonants that catch English speakers: <strong>δ</strong> is the th in <em>this</em> (written "th" here), <strong>θ</strong> is the th in <em>thin</em>, <strong>χ</strong> is a rough h (written "kh"), <strong>γ</strong> is a soft gargled g before a and o and a "y" before e and i, <strong>ρ</strong> is tapped. Two letters together change sound: <strong>μπ</strong> is b, <strong>ντ</strong> is d, <strong>γκ</strong> is g, <strong>τσ</strong> is ts. And the Greek question mark is a semicolon.</p>
+</div>
+
+<section class="deck" id="deck" data-store="greek-flashcards-v1" data-lang="el" aria-label="Flashcard deck">
+  <div class="deck-toolbar">
+    <div class="deck-chips" id="deck-categories" role="group" aria-label="Choose a category"></div>
+    <div class="deck-options">
+      <label class="deck-toggle"><input type="checkbox" id="deck-direction"> Show English first</label>
+      <label class="deck-toggle"><input type="checkbox" id="deck-learning-only"> Only cards I haven't got yet</label>
+      <button type="button" class="deck-btn" id="deck-shuffle">Shuffle</button>
+    </div>
+  </div>
+
+  <div class="deck-progress">
+    <div class="deck-progress-bar"><div class="deck-progress-fill" id="deck-progress-fill"></div></div>
+    <div class="deck-progress-text" id="deck-progress-text"></div>
+  </div>
+
+  <div class="flashcard-stage">
+    <button type="button" class="flashcard" id="flashcard" aria-live="polite" aria-label="Flashcard, press to flip">
+      <div class="flashcard-inner">
+        <div class="flashcard-face flashcard-front">
+          <div class="flashcard-category" id="card-front-category"></div>
+          <div class="flashcard-main" id="card-front-main"></div>
+          <div class="flashcard-sub" id="card-front-sub"></div>
+          <div class="flashcard-mnemonic" id="card-front-mnemonic"></div>
+          <div class="flashcard-hint">tap to flip</div>
+        </div>
+        <div class="flashcard-face flashcard-back">
+          <div class="flashcard-category" id="card-back-category"></div>
+          <div class="flashcard-main" id="card-back-main"></div>
+          <div class="flashcard-sub" id="card-back-sub"></div>
+          <div class="flashcard-note" id="card-back-note"></div>
+          <div class="flashcard-mnemonic" id="card-back-mnemonic"></div>
+        </div>
+      </div>
+    </button>
+    <p class="deck-empty" id="deck-empty" hidden>Every card in this set is marked as known. Untick the filter or reset to go again.</p>
+  </div>
+
+  <div class="deck-controls">
+    <button type="button" class="deck-btn" id="deck-prev" aria-label="Previous card">&larr; Prev</button>
+    <button type="button" class="deck-btn deck-btn-hint" id="deck-hint" aria-pressed="false">Hint</button>
+    <button type="button" class="deck-btn deck-btn-again" id="deck-again">Not yet</button>
+    <button type="button" class="deck-btn deck-btn-got" id="deck-got">Got it</button>
+    <button type="button" class="deck-btn" id="deck-next" aria-label="Next card">Next &rarr;</button>
+    <button type="button" class="deck-btn deck-btn-speak" id="deck-speak" hidden aria-label="Hear it spoken">&#9654; Hear it</button>
+  </div>
+  <p class="small deck-keys"><span class="deck-keys-hint">Keyboard: <kbd>&larr;</kbd> <kbd>&rarr;</kbd> to move, <kbd>space</kbd> to flip, <kbd>h</kbd> hint, <kbd>1</kbd> not yet, <kbd>2</kbd> got it.</span> <button type="button" class="deck-link" id="deck-reset">Reset progress</button></p>
+</section>
+
+<h2>Greetings</h2>
+<p>Greeks greet everyone: the taverna, the boat taxi, the person at the next belay. <em>Yah-sas</em> is the all-purpose hello and goodbye. Two traps: <em>ne</em> means yes, and a downward nod means no.</p>
+<div class="table-wrap phrase-group" data-category="Greetings">
+<table>
+<thead><tr><th>Greek</th><th>Say it</th><th>English</th><th>Note</th><th>Remember it</th></tr></thead>
+<tbody>
+<tr><td lang="el">Γεια σας</td><td>YAH-sas</td><td>Hello / goodbye (polite, or to more than one)</td><td>Works everywhere, all day, coming and going.</td><td>"YA, SAS!" is a hello and a goodbye. The polite one.</td></tr>
+<tr><td lang="el">Γεια σου</td><td>YAH-soo</td><td>Hi / bye (to one mate)</td><td>Same word, one person, informal.</td><td>"YA, SUE!" to one mate. Same YAH, but Sue instead of Sas.</td></tr>
+<tr><td lang="el">Καλημέρα</td><td>kah-lee-MEH-rah</td><td>Good morning</td><td>Until early afternoon.</td><td>"CALL ME, MARA" first thing in the morning.</td></tr>
+<tr><td lang="el">Καλησπέρα</td><td>kah-lee-SPEH-rah</td><td>Good evening</td><td>From about mid-afternoon on; it's also the taverna hello.</td><td>"CALL-EE, SPARE a" beer, it's evening.</td></tr>
+<tr><td lang="el">Καληνύχτα</td><td>kah-lee-NEEKH-tah</td><td>Good night</td><td>Only when someone's actually off to bed.</td><td>kah-lee-NEEKH-tah is just "NIGHT-a" with a rough kh in it.</td></tr>
+<tr><td lang="el">Αντίο</td><td>ah-DEE-o</td><td>Goodbye</td><td>Yah-sas does the same job; this is the formal one.</td><td>"Ah, DEE-O, I'm off."</td></tr>
+<tr><td lang="el">Τι κάνεις;</td><td>tee KAH-nees</td><td>How are you? (informal)</td><td>Literally "what are you doing?" Note the Greek question mark is a semicolon.</td><td>"TEA? CAN-EES?" How are you, want a tea?</td></tr>
+<tr><td lang="el">Τι κάνετε;</td><td>tee KAH-neh-teh</td><td>How are you? (polite)</td><td></td><td>Same tea, with the polite -teh tacked on.</td></tr>
+<tr><td lang="el">Καλά, ευχαριστώ. Εσύ;</td><td>kah-LAH, ef-khah-ree-STO. eh-SEE</td><td>Good, thanks. You?</td><td></td><td>Good (kah-LAH), thanks (F. Harry Stowe, see below), "EH, SEE?" and you?</td></tr>
+<tr><td lang="el">Με λένε Σαμ.</td><td>meh LEH-neh Sam</td><td>My name is Sam.</td><td>Literally "they call me Sam". Fran: <em>Me léne Fran.</em></td><td>meh LEH-neh: "they LAY the NAME on me": Sam.</td></tr>
+<tr><td lang="el">Χάρηκα.</td><td>HAH-ree-kah</td><td>Nice to meet you.</td><td></td><td>"HARRY-ka" is chuffed to meet you.</td></tr>
+<tr><td lang="el">Είμαστε από την Αυστραλία.</td><td>EE-mah-steh ah-PO teen af-strah-LEE-ah</td><td>We're from Australia.</td><td>Expect a cousin in Melbourne to be mentioned within a minute.</td><td>EE-mah-steh: "EAT, MASTER", we are. Then Australia said with an f: af-strah-LEE-ah.</td></tr>
+<tr><td lang="el">Ναι</td><td>neh</td><td>Yes</td><td>Sounds like "nah" and means yes. The single biggest trap in Greek.</td><td>NEH means YES. Say it and nod, until your ears stop hearing "nah".</td></tr>
+<tr><td lang="el">Όχι</td><td>OH-hee</td><td>No</td><td>Often just a click of the tongue and an upward tilt of the head.</td><td>"OH, HE won't." No.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Niceties</h2>
+<p>The layer that turns a transaction into a chat. <em>Parakaló</em> is please, you're welcome and "how can I help" in one word; <em>efharistó</em> is thank you and it's worth the practice, because the whole island lights up when a foreigner gets it out.</p>
+<div class="table-wrap phrase-group" data-category="Niceties">
+<table>
+<thead><tr><th>Greek</th><th>Say it</th><th>English</th><th>Note</th><th>Remember it</th></tr></thead>
+<tbody>
+<tr><td lang="el">Παρακαλώ</td><td>pah-rah-kah-LO</td><td>Please / you're welcome / how can I help?</td><td>Also what a shopkeeper says when you walk in.</td><td>"PARROT, CALL LOW": please, and you're welcome. One word, three jobs.</td></tr>
+<tr><td lang="el">Ευχαριστώ</td><td>ef-khah-ree-STO</td><td>Thank you</td><td>The classic trick: say "F. Harry Stowe" quickly.</td><td>"F. HARRY STOWE" said fast. Thank you, Harry, you stowed the bags.</td></tr>
+<tr><td lang="el">Ευχαριστώ πολύ</td><td>ef-khah-ree-STO po-LEE</td><td>Thank you very much</td><td><em>Polí</em> is "much"; a POLYgon has many sides.</td><td>F. Harry Stowe, POLY: many thanks.</td></tr>
+<tr><td lang="el">Τίποτα</td><td>TEE-po-tah</td><td>It's nothing / no worries</td><td>The reply to thanks.</td><td>"TEA? POT? TA!" It's nothing.</td></tr>
+<tr><td lang="el">Συγγνώμη</td><td>seegh-NO-mee</td><td>Sorry / excuse me</td><td>Bumping into someone, or getting the waiter.</td><td>"SIGN? NO, ME." Sorry, my mistake.</td></tr>
+<tr><td lang="el">Εντάξει</td><td>en-DAK-see</td><td>OK / fine / deal</td><td>Used constantly, for everything.</td><td>"IN TAXI!" OK, get in the taxi.</td></tr>
+<tr><td lang="el">Ορίστε</td><td>o-REE-steh</td><td>Here you go / pardon? / yes, what?</td><td>Said handing you the plate, or answering the phone.</td><td>"Oh, RISE-teh": here you go, up it comes.</td></tr>
+<tr><td lang="el">Ίσως</td><td>EE-sos</td><td>Maybe</td><td></td><td>"EASE, SO-so": maybe.</td></tr>
+<tr><td lang="el">Γεια μας!</td><td>YAH-mas</td><td>Cheers!</td><td>Short for <em>stin iyá mas</em>, to our health. The same YAH as hello.</td><td>"YA, MUSS" up the glasses. Cheers!</td></tr>
+<tr><td lang="el">Καλή όρεξη!</td><td>kah-LEE OH-rek-see</td><td>Enjoy your meal</td><td>Said to anyone eating nearby.</td><td>"Oh, WRECK-see": enjoy wrecking that plate.</td></tr>
+<tr><td lang="el">Καλό ταξίδι!</td><td>kah-LO tak-SEE-dee</td><td>Have a good trip</td><td>What the ferry man says.</td><td>tak-SEE-dee: good trip by TAXI, dee.</td></tr>
+<tr><td lang="el">Μιλάτε αγγλικά;</td><td>mee-LAH-teh ang-glee-KAH</td><td>Do you speak English?</td><td>On Kalymnos, almost always yes.</td><td>"Me, LATTE?" Talk to me over a latte. Ang-glee-KAH is English with a hard g.</td></tr>
+<tr><td lang="el">Δεν μιλάω ελληνικά.</td><td>then mee-LAH-o eh-lee-nee-KAH</td><td>I don't speak Greek.</td><td><em>Then</em> (th as in "this") is "not".</td><td>"THEN me LATTE-o": no Greek, just coffee.</td></tr>
+<tr><td lang="el">Λίγο.</td><td>LEE-gho</td><td>A little.</td><td>The honest answer.</td><td>A LEGO brick's worth. A little.</td></tr>
+<tr><td lang="el">Δεν καταλαβαίνω.</td><td>then kah-tah-lah-VEH-no</td><td>I don't understand.</td><td></td><td>"CATALOGUE? VEH... NO." No idea what you said.</td></tr>
+<tr><td lang="el">Καλά</td><td>kah-LAH</td><td>Good / fine / OK</td><td>The all-purpose positive.</td><td>kah-LAH: everything's CALLA-lily fine.</td></tr>
+<tr><td lang="el">Ωραία!</td><td>o-REH-ah</td><td>Lovely! / great!</td><td></td><td>"Oh, RAY-a" of sunshine. Lovely.</td></tr>
+<tr><td lang="el">Σιγά σιγά</td><td>see-GHAH see-GHAH</td><td>Slowly, slowly / take it easy</td><td>The island motto, and the answer to any hurry.</td><td>"SEE ya, GAH, no rush." Twice, because there's no rush.</td></tr>
+<tr><td lang="el">Έλα!</td><td>EH-lah</td><td>Come on! / hello (phone) / oh really?</td><td>The most Greek word there is; means whatever the tone means.</td><td>"ELLA, come here!"</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Getting around</h2>
+<p>Kos airport to the Mastichari ferry, the Pothia bus, a scooter up the coast, and the boat taxi to Telendos. The words on the signs and the ones you'll say to the driver.</p>
+<div class="table-wrap phrase-group" data-category="Getting around">
+<table>
+<thead><tr><th>Greek</th><th>Say it</th><th>English</th><th>Note</th><th>Remember it</th></tr></thead>
+<tbody>
+<tr><td lang="el">Πού είναι ...;</td><td>poo EE-neh</td><td>Where is ...?</td><td>Then name the place or point at the map.</td><td>"POO? EE-neh?" Where's the... yes, that.</td></tr>
+<tr><td lang="el">Πού είναι η τουαλέτα;</td><td>poo EE-neh ee too-ah-LEH-tah</td><td>Where is the toilet?</td><td></td><td>"POO... toilet?" The sentence writes itself.</td></tr>
+<tr><td lang="el">Λιμάνι</td><td>lee-MAH-nee</td><td>Harbour / port</td><td>Pothia's is the big one; Myrties and Rina are the little ones.</td><td>"LEE, MONEY": the harbour is where your money goes.</td></tr>
+<tr><td lang="el">Καράβι / πλοίο</td><td>kah-RAH-vee / PLEE-o</td><td>Boat / ship, the ferry</td><td>Either word on the timetable.</td><td>kah-RAH-vee is a CARAVAN by sea; PLEE-o, "PLEA-o, wait for me".</td></tr>
+<tr><td lang="el">Εισιτήριο</td><td>ee-see-TEE-ree-o</td><td>Ticket</td><td></td><td>"EASY, TERRY-o", Terry's got the tickets.</td></tr>
+<tr><td lang="el">Λεωφορείο</td><td>leh-o-fo-REE-o</td><td>Bus</td><td>Pothia to Masouri runs a few times a day; the timetable is at the harbour.</td><td>"LEO, FOR REAL-o?" The bus.</td></tr>
+<tr><td lang="el">Ταξί</td><td>tak-SEE</td><td>Taxi</td><td>Kalymnos taxis are shared on the main road; agree the fare first.</td><td>Same word, stress on the end.</td></tr>
+<tr><td lang="el">Μηχανάκι</td><td>mee-khah-NAH-kee</td><td>Scooter</td><td>What everyone hires in Masouri. <em>Skoo-ter</em> also works.</td><td>mee-khah-NAH-kee: the MECHANIC-y thing you rent and drop.</td></tr>
+<tr><td lang="el">Ενοικίαση</td><td>eh-nee-KEE-ah-see</td><td>Rental</td><td>The sign on the scooter and car shops.</td><td>"Any KEY-a-see?" Rental. Look for it on the shopfront.</td></tr>
+<tr><td lang="el">Αριστερά / δεξιά</td><td>ah-ree-steh-RAH / thek-see-AH</td><td>Left / right</td><td></td><td>ah-ree-steh-RAH: "ARISTOcrats keep LEFT". thek-see-AH: "THE SEXY-AH" on the right.</td></tr>
+<tr><td lang="el">Ευθεία</td><td>ef-THEE-ah</td><td>Straight ahead</td><td></td><td>"F, THEE-ah": straight on.</td></tr>
+<tr><td lang="el">Πόσο μακριά είναι;</td><td>PO-so mah-kree-AH EE-neh</td><td>How far is it?</td><td></td><td>mah-kree-AH: as far as MAC-REE-AH, the Macca's over the hill.</td></tr>
+<tr><td lang="el">Παραλία</td><td>pah-rah-LEE-ah</td><td>Beach</td><td>Kantouni and Platis Gialos on the west coast; Vlychadia in the south.</td><td>"PARA-LEE-ah": PARAdise by the sea.</td></tr>
+<tr><td lang="el">Θάλασσα</td><td>THAH-lah-sah</td><td>Sea</td><td>Th as in "thin".</td><td>THAH-lah-sah is the sound of the sea lapping.</td></tr>
+<tr><td lang="el">Μονοπάτι</td><td>mo-no-PAH-tee</td><td>Path / trail</td><td>The old mule paths across the island are all monopátia.</td><td>MONO-PATTY: one narrow path.</td></tr>
+<tr><td lang="el">Βουνό</td><td>voo-NO</td><td>Mountain</td><td></td><td>"VOO? NO." You're not walking up that.</td></tr>
+<tr><td lang="el">Χωριό</td><td>kho-ree-O</td><td>Village</td><td></td><td>kho-ree-O: the CORE-ee-o of the island.</td></tr>
+<tr><td lang="el">Κάστρο</td><td>KAH-stro</td><td>Castle</td><td>The Chora castle above Pothia is a sunset walk.</td><td>KAH-stro, CASTle, plainly.</td></tr>
+<tr><td lang="el">Σπηλιά</td><td>spee-LYAH</td><td>Cave</td><td>Grande Grotta is <em>i spiliá</em> to locals.</td><td>"SPEE-LEAH": the cave's spooky, Leah.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Place names</h2>
+<p>Say the island's name right and you're ahead of most visitors: the stress is on the first syllable. The rest are the villages on the climbers' coast, the port, and the way in and out.</p>
+<div class="table-wrap phrase-group" data-category="Place names">
+<table>
+<thead><tr><th>Greek</th><th>Say it</th><th>English</th><th>Note</th><th>Remember it</th></tr></thead>
+<tbody>
+<tr><td lang="el">Κάλυμνος</td><td>KAH-leem-nos</td><td>Kalymnos</td><td>Stress on KAH, not on lim. Locals wince at ka-LIM-nos.</td><td>KAH-leem-nos: stay CALM-nos. First syllable, always.</td></tr>
+<tr><td lang="el">Πόθια</td><td>PO-thee-ah</td><td>Pothia, the port and capital</td><td>Where the ferry lands and the buses leave from.</td><td>PO-thee-ah: "POH, THE-A" port.</td></tr>
+<tr><td lang="el">Μασούρι</td><td>mah-SOO-ree</td><td>Masouri, the climbers' village</td><td>Bars, gear shops, the Odyssey base, the festival hub.</td><td>"MA, SORRY", I'm going climbing again.</td></tr>
+<tr><td lang="el">Αρμεός</td><td>ar-meh-OS</td><td>Armeos, above Masouri</td><td>The village under the Grande Grotta and Spartacus crags.</td><td>"ARMS, EH? OS": arms of steel from the Armeos crags.</td></tr>
+<tr><td lang="el">Μυρτιές</td><td>meer-TYES</td><td>Myrties, the boat-taxi jetty</td><td>Where the boat leaves for Telendos, every half hour.</td><td>meer-TYES: where the boat "MERE-TIES" up.</td></tr>
+<tr><td lang="el">Τέλενδος</td><td>TEH-len-dos</td><td>Telendos island</td><td>The dinner across the water; last boat back is late.</td><td>"TELL 'EM, DOS" beers on Telendos.</td></tr>
+<tr><td lang="el">Βαθύ / Ρίνα</td><td>vah-THEE / REE-nah</td><td>Vathy valley and Rina harbour</td><td>The fjord, the kayaks, the fish tavernas.</td><td>vah-THEE: "VAH, THE" fjord. REE-nah is the harbour at the end of it.</td></tr>
+<tr><td lang="el">Εμπορειός</td><td>em-bo-ree-OS</td><td>Emporios</td><td>The village at the end of the road in the north.</td><td>em-bo-ree-OS: the EMPORIUM at the end of the road.</td></tr>
+<tr><td lang="el">Κως</td><td>kos</td><td>Kos</td><td>Where you fly in.</td><td>As written. Kos.</td></tr>
+<tr><td lang="el">Μαστιχάρι</td><td>mah-stee-KHAH-ree</td><td>Mastichari, the Kos ferry port</td><td>Twenty minutes from Kos airport; ferries to Pothia.</td><td>"MUST I CARRY" the bags to the ferry? Yes.</td></tr>
+<tr><td lang="el">Αθήνα</td><td>ah-THEE-nah</td><td>Athens</td><td>Th as in "thin".</td><td>ah-THEE-nah: Athena, the goddess. Her city.</td></tr>
+<tr><td lang="el">Πειραιάς</td><td>pee-reh-AS</td><td>Piraeus, the Athens port</td><td></td><td>"PEER-AY-ASS": the pier where the big ferries dock.</td></tr>
+<tr><td lang="el">Ακρόπολη</td><td>ah-KRO-po-lee</td><td>The Acropolis</td><td>Stress on KRO, not on po.</td><td>ah-KRO-po-lee: the CROW sits on the top of the city.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Food and drink</h2>
+<p>The taverna is the point of the evening, so this group is bigger. Coffee comes cold by default in September; ask for a freddo espresso and you'll fit right in.</p>
+<div class="table-wrap phrase-group" data-category="Food and drink">
+<table>
+<thead><tr><th>Greek</th><th>Say it</th><th>English</th><th>Note</th><th>Remember it</th></tr></thead>
+<tbody>
+<tr><td lang="el">Ένα τραπέζι για δύο, παρακαλώ.</td><td>EH-nah trah-PEH-zee yah THEE-o</td><td>A table for two, please.</td><td></td><td>trah-PEH-zee: a TRAPEZE for a table. THEE-o: two, with a th.</td></tr>
+<tr><td lang="el">Τον κατάλογο, παρακαλώ.</td><td>ton kah-TAH-lo-gho</td><td>The menu, please.</td><td></td><td>The CATALOGUE. Same word, softer g.</td></tr>
+<tr><td lang="el">Τι προτείνετε;</td><td>tee pro-TEE-neh-teh</td><td>What do you recommend?</td><td>Nearly always gets "the fish" or "the goat".</td><td>"Tea? PROTEIN, eh, teh?" What do you recommend, and I want protein.</td></tr>
+<tr><td lang="el">Έναν καφέ, παρακαλώ.</td><td>EH-nan kah-FEH</td><td>A coffee, please.</td><td><em>Fréddo espresso</em> is the cold default; <em>ellinikó</em> is the little boiled one.</td><td>kah-FEH: coffee with the stress on the end. Say FEH like you mean it.</td></tr>
+<tr><td lang="el">Μία μπύρα, παρακαλώ.</td><td>MEE-ah BEE-rah</td><td>A beer, please.</td><td>Mythos, Fix or Alfa; ask for <em>megáli</em> for the big one.</td><td>BEE-rah: beer, with a rolled r and a bee.</td></tr>
+<tr><td lang="el">Δύο μπύρες</td><td>THEE-o BEE-res</td><td>Two beers</td><td></td><td>Two (THEE-o) bees: BEE-res.</td></tr>
+<tr><td lang="el">Ένα ποτήρι κρασί</td><td>EH-nah po-TEE-ree krah-SEE</td><td>A glass of wine</td><td><em>Lefkó</em> white, <em>kókkino</em> red; the house wine comes in a jug by the half kilo.</td><td>po-TEE-ree: POTTERY, the glass. krah-SEE: wine makes you CRAZY.</td></tr>
+<tr><td lang="el">Νερό</td><td>neh-RO</td><td>Water</td><td>Bottled on the islands; the tap water is brackish.</td><td>"NAY, ROW": I'll swim, thanks. Water.</td></tr>
+<tr><td lang="el">Ούζο / ρακή / τσίπουρο</td><td>OO-zo / rah-KEE / TSEE-poo-ro</td><td>The three spirits</td><td>Ouzo is aniseed; raki and tsipouro are grape spirit; all arrive uninvited after dinner.</td><td>Ouzo you know. rah-KEE puts you on the RACK-y next morning. TSEE-poo-ro sounds like the sneeze it causes.</td></tr>
+<tr><td lang="el">Ψάρι</td><td>PSAH-ree</td><td>Fish</td><td>Priced by the kilo; ask before you order.</td><td>"PSST, SORRY", the fish is gone. Say the p.</td></tr>
+<tr><td lang="el">Χταπόδι</td><td>khtah-PO-thee</td><td>Octopus</td><td>Hung to dry outside the taverna; grilled.</td><td>khtah-PO-thee: the PODdy thing drying on the line.</td></tr>
+<tr><td lang="el">Χωρίς κρέας</td><td>kho-REES KREH-as</td><td>Without meat</td><td></td><td>kho-REES: "CORE-EES", without. KREH-as: "CRAY-ass", meat.</td></tr>
+<tr><td lang="el">Τον λογαριασμό, παρακαλώ.</td><td>ton lo-ghar-yaz-MO</td><td>The bill, please.</td><td>Tipping is a round-up or a few coins; it's not expected.</td><td>lo-ghar-yaz-MO: the LOGGER adds up the bill. Loudly.</td></tr>
+<tr><td lang="el">Ήταν πολύ νόστιμο.</td><td>EE-tan po-LEE NO-stee-mo</td><td>It was delicious.</td><td></td><td>NO-stee-mo: "NOSE, TEA, MO", so good you smelled it first.</td></tr>
+<tr><td lang="el">Πρωινό / μεσημεριανό / βραδινό</td><td>pro-ee-NO / meh-see-meh-ree-ah-NO / vrah-thee-NO</td><td>Breakfast / lunch / dinner</td><td>Greeks eat late: lunch at two, dinner at nine or ten.</td><td>pro-ee-NO: "PRO, EE, NO", too early. vrah-thee-NO from <em>vrádi</em>, evening.</td></tr>
+<tr><td lang="el">Μεζέδες</td><td>meh-ZEH-thes</td><td>Small plates</td><td>Order a table full instead of mains.</td><td>MEZE, plural. Meh-ZEH-thes: lots of little ones.</td></tr>
+<tr><td lang="el">Γίγαντες</td><td>YEE-gan-des</td><td>Giant beans</td><td>Baked in tomato; the vegetarian order.</td><td>GIANTS. Giant beans.</td></tr>
+<tr><td lang="el">Σαγανάκι</td><td>sah-ghah-NAH-kee</td><td>Fried cheese</td><td></td><td>SAGA-NAKI: the fried-cheese saga. Every night.</td></tr>
+<tr><td lang="el">Μούρι</td><td>MOO-ree</td><td>Kalymnos stuffed goat</td><td>The island dish; baked overnight for the festival.</td><td>MOO-ree: the goat says moo, then it's dinner.</td></tr>
+<tr><td lang="el">Γιαούρτι με μέλι</td><td>yah-OOR-tee meh MEH-lee</td><td>Yoghurt with honey</td><td>Kalymnos thyme honey is the good stuff.</td><td>yah-OOR-tee: YOGHURT-ee. MEH-lee: MELLOW honey.</td></tr>
+<tr><td lang="el">Παγωτό</td><td>pah-gho-TO</td><td>Ice cream</td><td></td><td>pah-gho-TO: "PAY, GO, TO" the ice cream counter.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Shopping and money</h2>
+<div class="table-wrap phrase-group" data-category="Shopping and money">
+<table>
+<thead><tr><th>Greek</th><th>Say it</th><th>English</th><th>Note</th><th>Remember it</th></tr></thead>
+<tbody>
+<tr><td lang="el">Πόσο κάνει;</td><td>PO-so KAH-nee</td><td>How much is it?</td><td></td><td>"POSSUM? CAN-EE?" How much can it be?</td></tr>
+<tr><td lang="el">Μπορώ να πληρώσω με κάρτα;</td><td>bo-RO nah plee-RO-so meh KAR-tah</td><td>Can I pay by card?</td><td>Fine in Masouri and Pothia; the Telendos tavernas and the kiosks want cash.</td><td>bo-RO: "BORROW", can I. plee-RO-so: "PLEASE, ROSE-o", pay. KAR-tah: card.</td></tr>
+<tr><td lang="el">Μετρητά</td><td>meh-tree-TAH</td><td>Cash</td><td></td><td>meh-tree-TAH: count the METRES of cash.</td></tr>
+<tr><td lang="el">Ανοιχτό / κλειστό</td><td>ah-neekh-TO / klee-STO</td><td>Open / closed</td><td>Shops shut mid-afternoon and reopen around six.</td><td>ah-neekh-TO: "a NIGHT-TO" open. klee-STO: "CLOSE-TO", closed.</td></tr>
+<tr><td lang="el">Περίπτερο</td><td>peh-REEP-teh-ro</td><td>Kiosk</td><td>The little booth that sells everything, late.</td><td>peh-REEP-teh-ro: the PERIPHERAL kiosk on every corner.</td></tr>
+<tr><td lang="el">Φαρμακείο</td><td>far-mah-KEE-o</td><td>Pharmacy</td><td>Green cross; there's one in Masouri and several in Pothia.</td><td>PHARMACY-o. Same word, Greek ending.</td></tr>
+<tr><td lang="el">Σούπερ μάρκετ</td><td>SOO-per MAR-ket</td><td>Supermarket</td><td></td><td>Same words, Greek letters.</td></tr>
+<tr><td lang="el">Ταμείο</td><td>tah-MEE-o</td><td>Checkout / cashier</td><td>The sign above the till.</td><td>tah-MEE-o: "TAKE ME-o" your money.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Somewhere to sleep</h2>
+<div class="table-wrap phrase-group" data-category="Somewhere to sleep">
+<table>
+<thead><tr><th>Greek</th><th>Say it</th><th>English</th><th>Note</th><th>Remember it</th></tr></thead>
+<tbody>
+<tr><td lang="el">Έχω κράτηση.</td><td>EH-kho KRAH-tee-see</td><td>I have a reservation.</td><td></td><td>KRAH-tee-see: "CRATE-EE-SEE", I booked a crate.</td></tr>
+<tr><td lang="el">Ποιος είναι ο κωδικός για το wifi;</td><td>pyos EE-neh o ko-thee-KOS yah to wifi</td><td>What's the wifi password?</td><td></td><td>ko-thee-KOS: "CODE-EE-KOS", the code.</td></tr>
+<tr><td lang="el">Κλειδί</td><td>klee-THEE</td><td>Key</td><td></td><td>klee-THEE: "CLEE-THEE", the key. Same start as <em>klistó</em>, closed.</td></tr>
+<tr><td lang="el">Δωμάτιο</td><td>tho-MAH-tee-o</td><td>Room</td><td><em>Domátia</em> on a sign means rooms to let.</td><td>tho-MAH-tee-o: "the MATEY-o" room.</td></tr>
+<tr><td lang="el">Κλιματισμός</td><td>klee-mah-tees-MOS</td><td>Air conditioning</td><td></td><td>CLIMATE-is-MOS. The climate machine.</td></tr>
+<tr><td lang="el">Ζεστό νερό</td><td>zeh-STO neh-RO</td><td>Hot water</td><td>Solar on most roofs, so evening showers are hotter than morning ones.</td><td>zeh-STO: ZEST-o, hot. neh-RO: water.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Numbers and time</h2>
+<p>The festival is Friday to Sunday, the boats run on the clock, and the taverna bill is a number. A lot of these already live in English: pentagon, hexagon, octopus, decade.</p>
+<div class="table-wrap phrase-group" data-category="Numbers and time">
+<table>
+<thead><tr><th>Greek</th><th>Say it</th><th>English</th><th>Note</th><th>Remember it</th></tr></thead>
+<tbody>
+<tr><td lang="el">Ένα, δύο, τρία</td><td>EH-nah, THEE-o, TREE-ah</td><td>One, two, three</td><td></td><td>EH-nah one. THEE-o is duo with a th. TREE-ah is three.</td></tr>
+<tr><td lang="el">Τέσσερα, πέντε, έξι</td><td>TEH-seh-rah, PEN-deh, EK-see</td><td>Four, five, six</td><td></td><td>TETRA four, PENTAgon five, HEXAgon six.</td></tr>
+<tr><td lang="el">Επτά, οκτώ, εννέα, δέκα</td><td>ep-TAH, ok-TO, eh-NEH-ah, THEH-kah</td><td>Seven, eight, nine, ten</td><td></td><td>HEPTAthlon seven, OCTOpus eight, eh-NEH-ah nine, DECAde ten.</td></tr>
+<tr><td lang="el">Είκοσι, πενήντα, εκατό</td><td>EE-ko-see, peh-NEEN-dah, eh-kah-TO</td><td>Twenty, fifty, one hundred</td><td></td><td>EE-ko-see: "ICOSAhedron", twenty sides. peh-NEEN-dah: PENT-y, five tens. eh-kah-TO: HECTO, a hundred.</td></tr>
+<tr><td lang="el">Τι ώρα είναι;</td><td>tee O-rah EE-neh</td><td>What time is it?</td><td></td><td>O-rah: the hour. "Tea? What HOUR is it?"</td></tr>
+<tr><td lang="el">Σήμερα / αύριο / χθες</td><td>SEE-meh-rah / AV-ree-o / khthes</td><td>Today / tomorrow / yesterday</td><td></td><td>SEE-meh-rah: "SEE ME, RAH", today. AV-ree-o: "AVRIL", tomorrow. khthes: yesterday, a throat-clear.</td></tr>
+<tr><td lang="el">Πρωί / απόγευμα / βράδυ</td><td>pro-EE / ah-PO-yev-mah / VRAH-thee</td><td>Morning / afternoon / evening</td><td></td><td>pro-EE: the PRO climbs early. VRAH-thee: evening, and dinner (vrah-thee-NO).</td></tr>
+<tr><td lang="el">Παρασκευή / Σάββατο / Κυριακή</td><td>pah-rah-skeh-VEE / SAH-vah-to / keer-yah-KEE</td><td>Friday / Saturday / Sunday</td><td>The festival days, 2 to 4 October.</td><td>SAH-vah-to is Saturday with the letters loosened. keer-yah-KEE: "KEY-REE-ah-KEY", the day the shops are locked.</td></tr>
+<tr><td lang="el">Τώρα / αργότερα</td><td>TO-rah / ar-GHO-teh-rah</td><td>Now / later</td><td><em>Sigá sigá</em> usually wins.</td><td>TO-rah: "TOR-ah", now. ar-GHO-teh-rah: "ARGH, GO, later".</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Help and emergencies</h2>
+<p>112 works across Greece and the operators speak English. Kalymnos has a health centre in Pothia and a helicopter to Rhodes or Kos for anything serious, which is why the insurance covers climbing.</p>
+<div class="table-wrap phrase-group" data-category="Help and emergencies">
+<table>
+<thead><tr><th>Greek</th><th>Say it</th><th>English</th><th>Note</th><th>Remember it</th></tr></thead>
+<tbody>
+<tr><td lang="el">Βοήθεια!</td><td>vo-EE-thee-ah</td><td>Help!</td><td></td><td>"VOTE FOR THEE-ah!" Help!</td></tr>
+<tr><td lang="el">Καλέστε το 112.</td><td>kah-LEH-steh to eh-kah-TON THO-theh-kah</td><td>Call 112.</td><td>Also 166 for an ambulance and 108 for the coast guard.</td><td>kah-LEH-steh: "CALL, ESTHER": call 112.</td></tr>
+<tr><td lang="el">Χρειάζομαι γιατρό.</td><td>khree-AH-zo-meh yah-TRO</td><td>I need a doctor.</td><td></td><td>yah-TRO: "YA, TRO", the doctor. khree-AH-zo-meh: "CREE-AH, so me", I need.</td></tr>
+<tr><td lang="el">Νοσοκομείο</td><td>no-so-ko-MEE-o</td><td>Hospital</td><td>Kos and Rhodes have them; Kalymnos has a health centre.</td><td>no-so-ko-MEE-o: "NO SO COMFY-o".</td></tr>
+<tr><td lang="el">Πονάει εδώ.</td><td>po-NAH-ee eh-THO</td><td>It hurts here.</td><td></td><td>po-NAH-ee: the PONY kicked me. eh-THO: here.</td></tr>
+<tr><td lang="el">Αστυνομία</td><td>ah-stee-no-MEE-ah</td><td>Police</td><td></td><td>ASTY-NOMIA: the city's law.</td></tr>
+<tr><td lang="el">Λιμενικό</td><td>lee-meh-nee-KO</td><td>Coast guard / port police</td><td>Same root as <em>limáni</em>, harbour. They run the sea rescues.</td><td>lee-meh-nee-KO: from LEE-MAH-nee, the harbour. The harbour cops.</td></tr>
+<tr><td lang="el">Είναι επείγον.</td><td>EE-neh eh-PEE-ghon</td><td>It's urgent.</td><td></td><td>eh-PEE-ghon: "a PIGEON" emergency. It's urgent.</td></tr>
+<tr><td lang="el">Ατύχημα</td><td>ah-TEE-khee-mah</td><td>Accident</td><td></td><td>ah-TEE-khee-mah: "a TEA, HE, MA": someone spilled hot tea. Accident.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Crag and sea</h2>
+<p>Belay calls at Kalymnos are English, and so are most of the climbers, but the rescue, the boat taxi and the weather board are Greek. And the sea is half the day.</p>
+<div class="table-wrap phrase-group" data-category="Crag and sea">
+<table>
+<thead><tr><th>Greek</th><th>Say it</th><th>English</th><th>Note</th><th>Remember it</th></tr></thead>
+<tbody>
+<tr><td lang="el">Αναρρίχηση</td><td>ah-nah-REE-khee-see</td><td>Climbing</td><td>The festival is <em>Festivál anarríchisis</em>.</td><td>ah-nah-REE-khee-see: "ANNA REACHES-y" for the next hold.</td></tr>
+<tr><td lang="el">Σχοινί</td><td>skhee-NEE</td><td>Rope</td><td></td><td>skhee-NEE: a SKINNY rope. Yours is 9.5.</td></tr>
+<tr><td lang="el">Κράνος</td><td>KRAH-nos</td><td>Helmet</td><td></td><td>KRAH-nos: covers the CRANIUM.</td></tr>
+<tr><td lang="el">Διαδρομή</td><td>thee-ah-thro-MEE</td><td>Route</td><td></td><td>thee-ah-thro-MEE: "THE AERODROME-ee", the line you fly up.</td></tr>
+<tr><td lang="el">Βράχος</td><td>VRAH-khos</td><td>Rock / crag</td><td></td><td>VRAH-khos: "VRAH, CROSS" that rock.</td></tr>
+<tr><td lang="el">Ασφάλεια</td><td>as-FAH-lee-ah</td><td>Belay / safety</td><td>Also "insurance".</td><td>as-FAH-lee-ah: "AS FALL-ee-ah", the safety when you fall.</td></tr>
+<tr><td lang="el">Πέφτω!</td><td>PEF-to</td><td>Falling!</td><td>In practice you'll shout it in English, but the Greek partner next to you will get it.</td><td>PEF-to: "PUFF, TOE", the puff of air on the way down.</td></tr>
+<tr><td lang="el">Κατέβασέ με.</td><td>kah-TEH-vah-seh meh</td><td>Lower me.</td><td></td><td>kah-TEH-vah-seh: "CAT, EVA, SEH", lower the cat, Eva.</td></tr>
+<tr><td lang="el">Κολύμπι</td><td>ko-LEEM-bee</td><td>Swimming</td><td></td><td>ko-LEEM-bee: "COLLIN, BEE", swimming away from the bee.</td></tr>
+<tr><td lang="el">Καΐκι</td><td>kah-EE-kee</td><td>The wooden boat</td><td>The Telendos boat taxi and the deep-water-solo boats.</td><td>kah-EE-kee: "KAI, EE, KEY": Kai's got the key to the boat.</td></tr>
+<tr><td lang="el">Σφουγγάρι</td><td>sfoon-GAH-ree</td><td>Sponge</td><td>Kalymnos made its money diving for them; the museum in Pothia is worth an hour.</td><td>sfoon-GAH-ree: "SPOON, GARY" the sponge.</td></tr>
+<tr><td lang="el">Μελτέμι</td><td>mel-TEH-mee</td><td>The summer north wind</td><td>Fading by October; when it blows, the west-coast crags are cool and the boats bounce.</td><td>mel-TEH-mee: "MELT, EH, ME", the wind that stops you melting.</td></tr>
+<tr><td lang="el">Ήλιος / σκιά</td><td>EE-lee-os / skee-AH</td><td>Sun / shade</td><td>The whole festival is about which crag is in shade when.</td><td>EE-lee-os: HELIOS, the sun god. skee-AH: "SKI-AH", shade.</td></tr>
+<tr><td lang="el">Τι καιρό θα κάνει;</td><td>tee keh-RO thah KAH-nee</td><td>What's the weather going to do?</td><td></td><td>keh-RO: "CARE-O" about the weather.</td></tr>
+<tr><td lang="el">Άνεμος</td><td>AH-neh-mos</td><td>Wind</td><td></td><td>AH-neh-mos: an ANEMOmeter measures it.</td></tr>
+<tr><td lang="el">Πολύ ωραία!</td><td>po-LEE o-REH-ah</td><td>Very nice!</td><td>What you'll say at the top of every route.</td><td>POLY (much) + o-REH-ah (lovely). Lots of lovely.</td></tr>
+</tbody>
+</table>
+</div>
+
+<details class="sources">
+  <summary>Sources and conventions</summary>
+  <ul>
+    <li>Phrases are standard modern Greek as spoken in Athens and the Dodecanese. Kalymnos has its own accent and a few island words (<em>moúri</em> is one) but the standard forms are understood everywhere.</li>
+    <li>Pronunciations are English-speaker approximations in phrasebook style, with stress in capitals. "th" is the soft th of <em>this</em> unless the note says otherwise; "kh" is the rough h of Scottish <em>loch</em>.</li>
+    <li>Emergency numbers: 112 nationwide, 166 ambulance, 108 coast guard. The Kalymnos health centre is in Pothia.</li>
+  </ul>
+</details>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">Researched July 2026 for Sam and Fran. Prices and availability change; verify before booking.</div>
+</footer>
+<script src="site.js"></script>
+<script src="flashcards.js"></script>
+</body>
+</html>

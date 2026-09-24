@@ -1,5 +1,5 @@
-/* Adventure Trip 2026 - Slovenian flashcard deck */
-/* The phrase tables in slovenian.html are the source of truth; this script
+/* Adventure Trip 2026 - language flashcard deck (slovenian.html, greek.html) */
+/* The phrase tables on the page are the source of truth; this script
    reads them into a deck so the page still works as a plain reference
    without JavaScript, and site search can index every phrase. */
 
@@ -9,7 +9,8 @@
   var deck = document.getElementById("deck");
   if (!deck) return;
 
-  var STORE_KEY = "slovenian-flashcards-v1";
+  var STORE_KEY = deck.getAttribute("data-store") || "flashcards-v1";
+  var LANG = deck.getAttribute("data-lang") || "sl";
 
   // ---------- data ----------
 
@@ -226,7 +227,7 @@
     if (!("speechSynthesis" in window)) return;
     var voices = window.speechSynthesis.getVoices();
     for (var i = 0; i < voices.length; i++) {
-      if (/^sl(-|_|$)/i.test(voices[i].lang)) { voice = voices[i]; break; }
+      if (voices[i].lang.toLowerCase().split(/[-_]/)[0] === LANG) { voice = voices[i]; break; }
     }
     els.speak.hidden = !voice;
   }

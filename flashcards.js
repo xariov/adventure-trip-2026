@@ -137,10 +137,10 @@
 
     if (!hasCards) return;
 
-    var slSide = { cat: c.category, main: c.sl, sub: c.say };
-    var enSide = { cat: c.category, main: c.en, sub: "" };
-    var front = state.englishFirst ? enSide : slSide;
-    var back = state.englishFirst ? slSide : enSide;
+    // The front is only the prompt; the pronunciation is part of the answer
+    // and lives on the back whichever way round the deck is running.
+    var front = { cat: c.category, main: state.englishFirst ? c.en : c.sl, sub: "" };
+    var back = { cat: c.category, main: state.englishFirst ? c.sl : c.en, sub: c.say };
 
     els.frontCat.textContent = front.cat;
     els.frontMain.textContent = front.main;

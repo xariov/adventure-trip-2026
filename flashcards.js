@@ -18,6 +18,7 @@
     var cards = [];
     document.querySelectorAll(".phrase-group").forEach(function (group) {
       var category = group.getAttribute("data-category") || "";
+      var answerSay = group.hasAttribute("data-answer-say");
       group.querySelectorAll("tbody tr").forEach(function (tr) {
         var cells = tr.querySelectorAll("td");
         if (cells.length < 3) return;
@@ -28,6 +29,7 @@
           sl: sl,
           say: cells[1].textContent.trim(),
           en: cells[2].textContent.trim(),
+          answerSay: answerSay,
           note: cells[3] ? cells[3].textContent.trim() : "",
           mnemonic: cells[4] ? cells[4].innerHTML.trim() : ""
         });
@@ -137,10 +139,12 @@
 
     if (!hasCards) return;
 
-    // The front is only the prompt; the pronunciation is part of the answer
-    // and lives on the back whichever way round the deck is running.
-    var front = { cat: c.category, main: state.englishFirst ? c.en : c.sl, sub: "" };
-    var back = { cat: c.category, main: state.englishFirst ? c.sl : c.en, sub: c.say };
+    // Phrase cards show the pronunciation under the phrase, so the front is
+    // "here is the phrase, say it, what does it mean?". Groups marked
+    // data-answer-say (the alphabet) keep it on the back, where it is the answer.
+    var sayOnFront = !state.englishFirst && !c.answerSay;
+    var front = { cat: c.category, main: state.englishFirst ? c.en : c.sl, sub: sayOnFront ? c.say : "" };
+    var back = { cat: c.category, main: state.englishFirst ? c.sl : c.en, sub: sayOnFront ? "" : c.say };
 
     els.frontCat.textContent = front.cat;
     els.frontMain.textContent = front.main;
